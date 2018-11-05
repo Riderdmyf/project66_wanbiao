@@ -5,7 +5,8 @@ from django.http import HttpResponse
 
 #index
 def index(request):
-    return HttpResponse('wanbiao')
+    # return HttpResponse('wanbiao')
+    return render(request, 'wanbiao/index.html')
 
 #dingdan
 def dingdan(request):
