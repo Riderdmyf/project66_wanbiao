@@ -6,3 +6,7 @@ from django.http import HttpResponse
 #index
 def index(request):
     return HttpResponse('wanbiao')
+
+#dingdan
+def dingdan(request):
+    return HttpResponse('dingdan')
