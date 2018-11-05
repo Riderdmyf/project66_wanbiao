@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from wanbiao import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+
+    url(r'^index/', views.index),
 ]
