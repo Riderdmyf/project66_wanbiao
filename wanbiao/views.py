@@ -10,3 +10,15 @@ def index(request):
 #dingdan
 def dingdan(request):
     return HttpResponse('dingdan')
+
+#mobile
+def mobile(request):
+    return HttpResponse('mobile')
+
+#creditcard
+def creditcard(request):
+    return HttpResponse('creditcard')
+
+#service
+def service(request):
+    return HttpResponse('service')
