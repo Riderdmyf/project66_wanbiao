@@ -10,7 +10,7 @@ def index(request):
 
 #cart
 def cart(request):
-    return HttpResponse(request, 'wanbiao/cart.html')
+    return render(request, 'wanbiao/cart.html')
 
 #mobile
 def mobile(request):
@@ -26,8 +26,8 @@ def service(request):
 
 #login
 def login(request):
-    return HttpResponse(request, 'wanbiao/login.html')
+    return render(request, 'wanbiao/login.html')
 
 #register
 def register(request):
-    return HttpResponse(request, 'wanbiao/register')
+    return render(request, 'wanbiao/register.html')
