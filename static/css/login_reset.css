@@ -1,0 +1,249 @@
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td,div,span,a,b {
+ margin:0;
+ padding:0;
+ list-style:none
+}
+* {
+ font-size:inherit;
+ font-family:'Microsoft Yahei','Lucida Grande',Arial,'\5b8b\4f53';
+ line-height:inherit
+}
+html {
+ overflow-x:hidden;
+ overflow-y:scroll
+}
+*html {
+ background-image:url(about:blank);
+ background-attachment:fixed
+}
+body {
+ line-height:1
+}
+body,button,textarea {
+ font-size:12px
+}
+textarea {
+ padding:5px
+}
+fieldset,img {
+ border:0
+}
+table {
+ border-collapse:collapse;
+ border-spacing:0
+}
+h1 {
+ font-size:19px
+}
+h2 {
+ font-size:17px
+}
+h3 {
+ font-size:15px
+}
+h4,h5,h6 {
+ font-size:100%
+}
+hr {
+ border:0;
+ height:1px
+}
+a {
+ text-decoration:none;
+ color:#999;
+ line-height:1.5;
+ cursor:pointer
+}
+a:hover {
+ text-decoration:none;
+ color:#b01330
+}
+small {
+ font-size:100%
+}
+ins {
+ text-decoration:none
+}
+del {
+ text-decoration:line-through
+}
+legend {
+ color:#000
+}
+fieldset,img {
+ border:0
+}
+button,select,input,textarea {
+ font-size:100%
+}
+blockquote,q {
+ quotes:none
+}
+blockquote:before,blockquote:after,q:before,q:after {
+ content:'';
+ content:none
+}
+address,cite,dfn,em,var {
+ font-style:normal
+}
+code,kbd,pre,samp,tt {
+ font-family:"Courier New",Courier,monospace
+}
+abbr[title],acronym[title] {
+ border-bottom:1px dotted;
+ cursor:help
+}
+li {
+ list-style:none
+}
+ul,li,dl,dt,dd {
+ margin:0;
+ padding:0;
+ text-indent:0
+}
+dt {
+ font-weight:normal
+}
+.clear {
+ clear:both
+}
+.hide {
+ display:none
+}
+.inl {
+ display:inline
+}
+.inbl {
+ display:inline-block
+}
+.block {
+ display:block
+}
+.bold {
+ font-weight:bold
+}
+.del {
+ text-decoration:line-through
+}
+.tf {
+ text-align:left
+}
+.tc {
+ text-align:center
+}
+.tr {
+ text-align:right
+}
+.fl {
+ float:left
+}
+.fr {
+ float:right
+}
+.rel {
+ position:relative
+}
+.udl {
+ text-decoration:none
+}
+.ellipsis {
+ text-overflow:ellipsis;
+ white-space:nowrap;
+ overflow:hidden
+}
+.clearfix:after {
+ content:".";
+ display:block;
+ height:0;
+ clear:both;
+ visibility:hidden
+}
+*html .clearfix {
+ zoom:1
+}
+.clearfix {
+ display:block;
+ height:0;
+ line-height:0;
+ font-size:0
+}
+.mt10 {
+ margin-top:10px
+}
+.mr10 {
+ margin-right:10px
+}
+.ml10 {
+ margin-left:10px
+}
+.mb10 {
+ margin-bottom:10px
+}
+.ml15 {
+ margin-left:15px
+}
+.m_0_8 {
+ margin:0 8px
+}
+.m_0_10 {
+ margin:0 10px
+}
+.pt10 {
+ padding-top:10px
+}
+.pr10 {
+ padding-right:10px
+}
+.pl10 {
+ padding-left:10px
+}
+.pb10 {
+ padding-bottom:10px
+}
+.f12 {
+ font-size:12px;
+ font-family:Arial,'宋体'
+}
+.f14 {
+ font-size:14px!important
+}
+.f16 {
+ font-size:16px!important
+}
+.f18 {
+ font-size:18px!important;
+ letter-spacing:-1px
+}
+.f20 {
+ font-size:20px!important;
+ letter-spacing:-1px
+}
+.f22 {
+ font-size:22px!important;
+ letter-spacing:-1px
+}
+.f24 {
+ font-size:24px!important;
+ letter-spacing:-1px
+}
+.red {
+ color:#b01330!important
+}
+.cccc {
+ color:#CCC!important
+}
+.c999 {
+ color:#999!important
+}
+.c666 {
+ color:#666!important
+}
+.c444 {
+ color:#444!important
+}
+.c333 {
+ color:#333!important
+}
+.cfff {
+ color:#fff!important
+}

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/register_reset.css" />
+		<link rel="stylesheet" href="../css/register.css"/>
+		<script src="../js/jquery-1.12.3.js"></script>
+		<script> 
+			$(function(){
+
+				var t1 = false;
+				var t2 = false;
+				var t3 = false;
+				var t4 = false;
+
+				$("#phone").blur(function(){
+					var val = $(this).val();
+					var ret =/^[\d]{5,20}$/;if(!ret.test(val)) {
+						$("#phone").siblings(".err").show()
+					}
+					else{
+						$("#phone").siblings(".err").hide();
+						t1 = true;
+					}
+				});
+				
+				$("#yzm").blur(function(){
+					
+					var val = $(this).val();
+					var val1 = $(this).siblings("#yzm1").val();
+					if(val == val1) {
+						$("#yzm").siblings(".err").hide();
+						t2 = true;
+					}
+					else{
+						$("#yzm").siblings(".err").show() ;
+					}
+					
+				});
+				$("#yzm1").click(function(){
+					var a = parseInt(Math.random()*10)+ "" + parseInt(Math.random()*10) + "" + parseInt(Math.random()*10)+ "" + parseInt(Math.random()*10); 
+					
+					$("#yzm1").val(a);
+				});
+				
+				$("#mima1").blur(function(){
+					var val = $("#mima1").val();
+		            if (/^[0-9a-zA-Z_]{6,15}$/.test(val)) {
+						$("#mima1").siblings(".err").hide();
+						t3 = true;
+		             }
+		             else {
+		                $("#mima1").siblings(".err").show()
+		             }
+				});
+
+				$("#mima2").blur(function(){
+					var val1 = $("#mima1").val();
+					var val2 = $("#mima2").val();
+		            if (val1 == val2) {
+						$("#mima2").siblings(".err").hide();
+						t4 = true;
+		             }
+		             else {
+		                $("#mima2").siblings(".err").show();
+		             }
+				});
+
+				$("#zc").click(function(){
+					if(t1&&t2&&t3&&t4){
+						var xhr = new XMLHttpRequest();
+						xhr.open("post", "http://localhost/wbiao/php/register.php", true);
+						xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+						var str = "phone=" + $("#phone").val() + "&pwd=" + $("#mima1").val();
+						xhr.send(str);
+						xhr.onreadystatechange = function () {
+							if (xhr.readyState==4 && xhr.status==200) {
+								var obj = JSON.parse(xhr.responseText)
+								console.log(obj)
+								if(obj.status){
+									alert(obj.msg)
+									window.location.href="http://localhost/wbiao/html/login.html";
+								}
+							}
+						}
+					}
+				})
+				
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="logo">
+				<a href=""></a>
+				<span class="logotxt">
+					<img src="../img-1/logoname.png" alt="" />
+				</span>
+			</div>
+		</div>
+	
+		<div class="main">
+			<div class="content">
+				<h2>注册万表会员</h2>
+				<form action="">
+					<p>
+						<em class="nmob"></em>
+						<input class="ti" type="text" name="" id="phone" placeholder="请输入手机号码" />
+						<b class="err">亲，请输入正确的手机号码</b>
+					</p>
+					<p>
+						<em class="uchatcha"></em>
+						<input class="ti yzmti" type="text" name="" id="yzm" placeholder="验证码" />
+						<input  class="yzm" type="button" id="yzm1" value="3242" />
+						<b class="err">验证码错误</b>
+					</p>
+					<p>
+						<em class="unum"></em>
+						<input class="ti yzmti" type="text" name="" id="" placeholder="请输入短信验证码" />
+						<input  class="yzm" type="button" value="获取验证码" /> 
+						<b class="err">不行</b>
+					</p>
+					<p>
+						<em class="upsd"></em>
+						<input class="ti" id="mima1" type="password" name=""  placeholder="请设置密码" />
+						<b class="err">密码格式不正确</b>
+					</p>
+					<p>
+						<em class="upsd"></em>
+						<input class="ti" id="mima2" type="password" name=""  placeholder="请再次设置密码" />
+						<b class="err">两次输入密码不相同</b>
+					</p>
+					<p class="btnb">
+						<input class="btn" type="button" name="" id="zc" value="立即注册" />
+					</p>
+					<p class="xieyi">
+						 点击“立即注册”，即表示您同意并愿意遵守
+						 <a href="https://www.wbiao.cn/help-722.html">万表网用户协议</a>
+					</p>
+				</form>
+			</div>
+		</div>
+	
+		<div class="foot">
+			<div class="foot_1">
+				<p>
+					万表网名表商城版权所有&nbsp;2008-2016&nbsp;&nbsp;ICP备案证书号：粤ICP备09108738号-2&nbsp;&nbsp;网监备案：4401060103141
+				</p>
+				<p style="color:#999;">
+					Copyright 2008-2016 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.
+				</p>
+			</div>
+			<div class="foot_2">
+				<a href="">
+					<img src="../img-1/cert.png"/>
+				</a>
+				<a href="">
+					<img src="../img-1/cnnic_en.png"/>
+				</a>
+				<a href="">
+					<img src="../img-1/eca01.jpg"/>
+				</a>
+				<a href="">
+					<img src="../img-1/gzaic.gif"/>
+				</a>
+				<a href="">
+					<img src="../img-1/wangluotousuozhongxin.jpg"/>
+				</a>
+				<a href="">
+					<img src="../img-1/wangxinrenzheng.png"/>
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

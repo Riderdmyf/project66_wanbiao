@@ -8,9 +8,9 @@ def index(request):
     # return HttpResponse('wanbiao')
     return render(request, 'wanbiao/index.html')
 
-#dingdan
-def dingdan(request):
-    return HttpResponse('dingdan')
+#cart
+def cart(request):
+    return HttpResponse(request, 'wanbiao/cart.html')
 
 #mobile
 def mobile(request):
@@ -23,3 +23,11 @@ def creditcard(request):
 #service
 def service(request):
     return HttpResponse('service')
+
+#login
+def login(request):
+    return HttpResponse(request, 'wanbiao/login.html')
+
+#register
+def register(request):
+    return HttpResponse(request, 'wanbiao/register')

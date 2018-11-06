@@ -1,0 +1,23 @@
+.b__mobile, .b__cart, .b__empty_cart, .b__magnifier, .b__close, .b__del, .b__gbp, .b__wrp, .b__wlp, .b__lb, .b__rb, .b__lb1, .b__rb1, .pop-close {
+    background-image: url(../img/base.png);
+} 
+.b_logo{
+	 background-image:url(../img/base_new.png);
+}
+.b__cir, .b__cir p, .y__suggest, .b__tdc, .b__backtop, .b__compared, .new__close, .zp1, .zp2, .zp3, .zp4, .zp5, .btncar .car, a.to_close {
+    background-image: url(../img/bases.png);
+}
+.i__yrp, .cf_1page_link, .cf_boadr_pager_link, .cf_prev, .cf_next, .i__refresh, .morebtn, .ticon, .brand_msg a p.more span {
+    background-image: url(../img/indexs.png);
+}
+.i__s1, .i__s2, .i__s3, .i__s4, .i__s5, .i__s6, .i__shadow, .i__rsb, .i__rhb, .i__whb, .i__bhb, .cf_lb, .cf_rb {
+    background-image: url(../img/index.png);
+}
+.heading .hot, .heading .sale, .heading .new, .heading .clock, .heading .brand, .heading .like, .heading .share, .heading .shop, .heading .news {
+    background-image: url(../img/heading.png);
+    background-repeat: no-repeat;
+    margin-left: 7px;
+    vertical-align: middle;
+    display: inline-block;
+    height: 25px;
+}
