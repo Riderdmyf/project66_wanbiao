@@ -10,4 +10,6 @@ urlpatterns = [
     url(r'^service/$', views.service),
     url(r'^login/$', views.login),
     url(r'^register/$', views.register),
+
+    url(r'^addwatch$', views.addwatch),
 ]

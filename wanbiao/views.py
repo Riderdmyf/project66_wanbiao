@@ -1,3 +1,5 @@
+import random
+
 from django.shortcuts import render
 from django.http import HttpResponse
 from wanbiao.models import Watch
@@ -32,3 +34,13 @@ def login(request):
 #register
 def register(request):
     return render(request, 'wanbiao/register.html')
+
+#addwatch
+def addwatch(request):
+
+    watch = Watch()
+    watch.img = 'img-' + str(random.randrange(500))
+
+    watch.save()
+
+    return HttpResponse('added watch successfully' + watch.img)
