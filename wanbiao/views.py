@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from wanbiao.models import Watch
 
 # Create your views here.
 
