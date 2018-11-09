@@ -35,6 +35,10 @@ def login(request):
 def register(request):
     return render(request, 'wanbiao/register.html')
 
+#epos(buy page)
+def epos(request):
+    return render(request, 'wanbiao/epos.html')
+
 #addwatch
 def addwatch(request):
 
