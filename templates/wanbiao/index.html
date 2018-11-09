@@ -1,1549 +1,1556 @@
+{% extends 'wanbiao/base.html' %}
 {% load static %}
 
 <!DOCTYPE html>
 <html>
-	<head> 
-		<meta charset="utf-8" />
-		<title></title>
-		<link rel="stylesheet" href="{% static 'css/reset.css' %}" />
-		<link rel="stylesheet" href="{% static 'css/index.css' %}" />
-		<link rel="stylesheet" href="{% static 'css/bg-index.css' %}" />
-		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
-		<script src="{% static 'js/pop_zone.js' %}"></script>
-		<script src="{% static 'js/cf.js' %}"></script>
-		<script>
-			$(function(){
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    {#		<link rel="stylesheet" href="{% static 'css/reset.css' %}" />#}
 
-			}) 
-		</script>
+    {% block extcss %}
+        <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/bg-index.css' %}"/>
+    {% endblock %}
+    {#		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>#}
 
-        <title>
-            {% block title %}
+    {% block extjs %}
+        <script src="{% static 'js/pop_zone.js' %}"></script>
+        <script src="{% static 'js/cf.js' %}"></script>
+    {% endblock %}
 
-            {% endblock %}
-        </title>
+    <title>
+        {% block title %}
+            主页
+        {% endblock %}
+    </title>
 
-	</head>
-	<body>
-		<div class="index_news rel" id="pop_zone">
-			<ul class="wrap">
-				<li>
-					<a href="#">
-						<img style="display: block;" src="../img/150641725401239.jpg"/>
-					</a>
-				</li>
-				<li id="pop-close" class="pop-close"></li>
-			</ul>
-		</div>
+</head>
+<body>
+{% block content %}
+    <div class="index_news rel" id="pop_zone">
+        <ul class="wrap">
+            <li>
+                <a href="#">
+                    <img style="display: block;" src="../img/150641725401239.jpg"/>
+                </a>
+            </li>
+            <li id="pop-close" class="pop-close"></li>
+        </ul>
+    </div>
 
-		<div class="top">
-			<div class="wrap">
-				<div class="fr">
-					<div class="b-block">
-						<a href="{% url 'wanbiao:login' %}" target="_blank">登录</a>
-						<a href="{% url 'wanbiao:register' %}" class="zc_on" target="_blank">注册（即送50元）</a>
-					</div>
-					<div class="b-block">
-						<span>|</span>
-						<a href="{% url 'wanbiao:cart' %}">我的订单</a>
-					</div>
-					<div class="b-block _hover">
-						<span>|</span>
-						<a href="#">手机万表</a>
-						<div class="dropdown" id="dropdown"style="display: none;height: 226px;padding-top: 0px;margin-top: 0px;padding-bottom: 0px;margin-bottom: 0px;">
-							<div class="img_box">
-								<a href="#">
-									<img src="../img/QRcode_wbapp.png" alt="" />
-								</a>
-								<div class="clear"></div>
-							</div>
-							<div class="img_box img_box2" style="display: none;">
-								<a href="#">
-									<img src="../img/143234662463629.png"/>
-								</a>
-							</div>
-							<div class="tab_dropdown">
-								<ul>
-									<li class="tab_in">万表商城APP</li>
-									<li>万表微信服务号</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="b-block">
-						<a href="#">办理信用卡</a>
-					</div>
-					<div class="b-block">
-						<a href="#">服务专线</a>
-					</div>
-					<div class="b-block">
-						<span>|</span>
-						<a href="#">English</a>
-					</div>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-	
-		<div class="head">
-			<div class="wrap">
-				<div class="logo fl rel">
-					<div class="fl rel">
-						<div class="logo_1">
-							<a href="#" class="b_logo"></a>
-						</div>
-					</div>
-					<div class="logo_2 fl rel">
-						<a href="#"><img src="../img/149421866385797.gif"/></a>
-					</div>
-					<div class="clear"></div>
-				</div>
-				<div class="m_r fr">
-					<div class="m">
-						<form class="srh" action="#" method="get">
-							<label for="ipt" class="lab";>
-								<input type="text" class="ipt" value="瑞士表"/>
-							</label>
-							<input class="btn" type="button" value="搜索" />
-							<div class="clear"></div>
-						</form>
-						<div class="m_b">
-							<a href="#">天梭</a><a href="#">迪沃斯5周年庆，满5000减500</a>
-						</div>
-					</div>
-					<div class="fr rel btncar">
-						<a href="cart.html" class="" >
-							<span class="car"></span>购物车<div class="b_cnt"><p>0</p></div>
-						</a>
-					</div>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
-		
-		<div class="nav">
-			<div class="wrap">
-				<div class="fl">
-					<h2 class="nav_tit"><a href="#">全部腕表</a></h2>
-					<div class="menu">
-						<div class="box">
-							<dl>
-								<dt><a href="#">&nbsp;&nbsp;顶级品牌</a></dt>
-								<dd>
-									<a href="#">百达翡丽</a>
-									<a href="#">亨利·慕时</a>
-									<a href="#">积家</a>
-									<a href="#">柏高</a>
-								</dd>
-								<dd class="b-aside">
-									<div class="col col-1">
-										<div class="t">顶级品牌&gt;</div>
-										<div class="bra-list">
-											<a title="百达翡丽" href="">
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>百达翡丽</p>
-											</a>
-											<a title="江诗丹顿" href="">
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>江诗丹顿</p>
-											</a>
-											<a title="亨利·慕时" href="">
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>亨利·慕时</p>
-											</a>
-											<a title="积家" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>积家</p>
-											</a>
-											<a title="伯爵" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>伯爵</p>
-											</a>
-											<a title="宝玑" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>宝玑</p>
-											</a>
-											<a title="宝珀" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>宝珀</p>
-											</a>
-											<a title="柏高" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>柏高</p>
-											</a>
-										</div>
-									</div>
-									<div class="col col-2">
-										<div class="t">精选推荐&gt;</div>
-										<div class="arc-list">
-											<a  href="">柏高<span>|</span></a>
-											<a  href="">亨利·慕时<span>|</span></a>
-											<a  href="">百达翡丽<span>|</span></a>
-											<a  href="">江诗丹顿<span>|</span></a>
-											<a  href="">宝玑<span>|</span></a>
-											<a  href="">宝珀<span>|</span></a>
-											<a  href="">积家<span>|</span></a>
-											<a  href="">朗格<span>|</span></a>
-											<a  href="">格拉苏蒂∙原创<span>|</span></a>
-											<a  href="">爱彼<span>|</span></a>
-											<a  href="">伯爵<span>|</span></a>
-											<a  href="">雅克德罗<span>|</span></a>
-											<a  href="">芝柏<span>|</span></a>
-											<a  href="">雅典<span>|</span></a>
-											<a  href="">法穆兰<span>|</span></a>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="t">促销精选&gt;</div>
-										<div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
-											<a rel="nofollow"  href="">“表王”百达翡丽<span>|</span></a>
-											<a rel="nofollow"  href="">珍稀罕有，亨利慕时<span>|</span></a>
-											<a rel="nofollow"  href="">宝玑<span>|</span></a>
-											<a rel="nofollow"  href="">积家手表<span>|</span></a>
-										</div>
-									</div>
-								</dd>
-							</dl>
-						</div>
-						<div class="box">
-								<dl>
-									<dt><a href="#">&nbsp;&nbsp;奢华品牌</a></dt>
-									<dd>
-										<a href="#">欧米茄</a>
-										<a href="#">劳力士</a>
-										<a href="#">库尔沃</a>
-										<a href="#">莫勒</a>
-									</dd>
-									<dd class="b-aside">
-									<div class="col col-1">
-										<div class="t">顶级品牌&gt;</div>
-										<div class="bra-list">
-											<a title="百达翡丽" href="">
-												<img class="lazy" src="../img/147220021267169.png" >
-												<p>百达翡丽</p>
-											</a>
-											<a title="江诗丹顿" href="">
-												<img class="lazy" src="../img/147220021267169.png" >
-												<p>江诗丹顿</p>
-											</a>
-											<a title="亨利·慕时" href="">
-												<img class="lazy" src="../img/147220021267169.png" >
-												<p>亨利·慕时</p>
-											</a>
-											<a title="积家" href="" >
-												<img class="lazy" src="../img/147220021267169.png" >
-												<p>积家</p>
-											</a>
-											<a title="伯爵" href="" >
-												<img class="lazy" src="../img/147220021267169.png" >
-												<p>伯爵</p>
-											</a>
-											<a title="宝玑" href="" >
-												<img class="lazy" src="../img/147220021267169.png" >
-												<p>宝玑</p>
-											</a>
-											<a title="宝珀" href="" >
-												<img class="lazy" src="../img/147220021267169.png" >
-												<p>宝珀</p>
-											</a>
-											<a title="柏高" href="" >
-												<img class="lazy" src="../img/147220021267169.png" >
-												<p>柏高</p>
-											</a>
-										</div>
-									</div>
-									<div class="col col-2">
-										<div class="t">精选推荐&gt;</div>
-										<div class="arc-list">
-											<a  href="">积家<span>|</span></a>
-											<a  href="">朗格<span>|</span></a>
-											<a  href="">格拉苏蒂∙原创<span>|</span></a>
-											<a  href="">爱彼<span>|</span></a>
-											<a  href="">伯爵<span>|</span></a>
-											<a  href="">雅克德罗<span>|</span></a>
-											<a  href="">芝柏<span>|</span></a>
-											<a  href="">雅典<span>|</span></a>
-											<a  href="">法穆兰<span>|</span></a>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="t">促销精选&gt;</div>
-										<div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
-											<a rel="nofollow"  href="">“表王”百达翡丽<span>|</span></a>
-											<a rel="nofollow"  href="">珍稀罕有，亨利慕时<span>|</span></a>
-											<a rel="nofollow"  href="">宝玑<span>|</span></a>
-											<a rel="nofollow"  href="">积家手表<span>|</span></a>
-										</div>
-									</div>
-								</dd>
-								</dl>
-						</div>
-						<div class="box">
-							<dl>
-								<dt><a href="#">&nbsp;&nbsp;轻奢品牌</a></dt>
-								<dd>
-									<a href="#">天梭</a>
-									<a href="#">迪沃斯</a>
-									<a href="#">浪琴</a>
-									<a href="#">赫柏林</a>
-								</dd>
-								<dd class="b-aside">
-									<div class="col col-1">
-										<div class="t">顶级品牌&gt;</div>
-										<div class="bra-list">
-											<a title="百达翡丽" href="">
-												<img class="lazy" src="../img/147220174092976.png" >
-												<p>百达翡丽</p>
-											</a>
-											<a title="江诗丹顿" href="">
-												<img class="lazy" src="../img/147220174092976.png" >
-												<p>江诗丹顿</p>
-											</a>
-											<a title="亨利·慕时" href="">
-												<img class="lazy" src="../img/147220174092976.png" >
-												<p>亨利·慕时</p>
-											</a>
-											<a title="积家" href="" >
-												<img class="lazy" src="../img/147220174092976.png" >
-												<p>积家</p>
-											</a>
-											<a title="伯爵" href="" >
-												<img class="lazy" src="../img/147220174092976.png" >
-												<p>伯爵</p>
-											</a>
-											<a title="宝玑" href="" >
-												<img class="lazy" src="../img/147220174092976.png" >
-												<p>宝玑</p>
-											</a>
-											<a title="宝珀" href="" >
-												<img class="lazy" src="../img/147220174092976.png" >
-												<p>宝珀</p>
-											</a>
-											<a title="柏高" href="" >
-												<img class="lazy" src="../img/147220174092976.png" >
-												<p>柏高</p>
-											</a>
-										</div>
-									</div>
-									<div class="col col-2">
-										<div class="t">精选推荐&gt;</div>
-										<div class="arc-list">
-											<a  href="">柏高<span>|</span></a>
-											<a  href="">亨利·慕时<span>|</span></a>
-											<a  href="">百达翡丽<span>|</span></a>
-											<a  href="">江诗丹顿<span>|</span></a>
-											<a  href="">宝玑<span>|</span></a>
-											<a  href="">宝珀<span>|</span></a>
-											<a  href="">积家<span>|</span></a>
-											<a  href="">朗格<span>|</span></a>
-											<a  href="">格拉苏蒂∙原创<span>|</span></a>
-											<a  href="">爱彼<span>|</span></a>
-											<a  href="">伯爵<span>|</span></a>
-											<a  href="">雅克德罗<span>|</span></a>
-											<a  href="">芝柏<span>|</span></a>
-											<a  href="">雅典<span>|</span></a>
-											<a  href="">法穆兰<span>|</span></a>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="t">促销精选&gt;</div>
-										<div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
-											<a rel="nofollow"  href="">“表王”百达翡丽<span>|</span></a>
-											<a rel="nofollow"  href="">珍稀罕有，亨利慕时<span>|</span></a>
-											<a rel="nofollow"  href="">宝玑<span>|</span></a>
-											<a rel="nofollow"  href="">积家手表<span>|</span></a>
-										</div>
-									</div>
-								</dd>
-							</dl>
-						</div>
-						<div class="box">
-							<dl>
-								<dt><a href="#">&nbsp;&nbsp;时尚、潮牌</a></dt>
-								<dd>
-									<a href="#">卡西欧</a>
-									<a href="#">CK</a>
-									<a href="#">MINI</a>
-									<a href="#">阿玛尼</a>
-									<a href="#">DW</a>
-								</dd>
-								<dd class="b-aside">
-									<div class="col col-1">
-										<div class="t">顶级品牌&gt;</div>
-										<div class="bra-list">
-											<a title="百达翡丽" href="">
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>百达翡丽</p>
-											</a>
-											<a title="江诗丹顿" href="">
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>江诗丹顿</p>
-											</a>
-											<a title="亨利·慕时" href="">
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>亨利·慕时</p>
-											</a>
-											<a title="积家" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>积家</p>
-											</a>
-											<a title="伯爵" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>伯爵</p>
-											</a>
-											<a title="宝玑" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>宝玑</p>
-											</a>
-											<a title="宝珀" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>宝珀</p>
-											</a>
-											<a title="柏高" href="" >
-												<img class="lazy" src="../img/147219975729781.png" >
-												<p>柏高</p>
-											</a>
-										</div>
-									</div>
-									<div class="col col-2">
-										<div class="t">精选推荐&gt;</div>
-										<div class="arc-list">
-											<a  href="">百达翡丽<span>|</span></a>
-											<a  href="">江诗丹顿<span>|</span></a>
-											<a  href="">宝玑<span>|</span></a>
-											<a  href="">宝珀<span>|</span></a>
-											<a  href="">积家<span>|</span></a>
-											<a  href="">朗格<span>|</span></a>
-											<a  href="">格拉苏蒂∙原创<span>|</span></a>
-											<a  href="">爱彼<span>|</span></a>
-											<a  href="">伯爵<span>|</span></a>
-											<a  href="">雅克德罗<span>|</span></a>
-											<a  href="">芝柏<span>|</span></a>
-											<a  href="">雅典<span>|</span></a>
-											<a  href="">法穆兰<span>|</span></a>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="t">促销精选&gt;</div>
-										<div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
-											<a rel="nofollow"  href="">“表王”百达翡丽<span>|</span></a>
-											<a rel="nofollow"  href="">珍稀罕有，亨利慕时<span>|</span></a>
-											<a rel="nofollow"  href="">宝玑<span>|</span></a>
-											<a rel="nofollow"  href="">积家手表<span>|</span></a>
-										</div>
-									</div>
-								</dd>
-							</dl>
-						</div>
-						<div class="box">
-							<dl>
-								<dt><a href="#">&nbsp;&nbsp;智能表、国产表</a></dt>
-								<dd>
-									<a href="#">飞亚达</a>
-									<a href="#">华为</a>
-									<a href="#">海鸥</a>
-									<a href="#">爱普生</a>
-									<a href="#">表带</a>
-								</dd>
-								<dd class="b-aside">
-									<div class="col col-1">
-										<div class="t">顶级品牌&gt;</div>
-										<div class="bra-list">
-											<a title="百达翡丽" href="">
-												<img class="lazy" src="../img/147220021278727.png" >
-												<p>百达翡丽</p>
-											</a>
-											<a title="江诗丹顿" href="">
-												<img class="lazy" src="../img/147220021278727.png" >
-												<p>江诗丹顿</p>
-											</a>
-											<a title="亨利·慕时" href="">
-												<img class="lazy" src="../img/147220021278727.png" >
-												<p>亨利·慕时</p>
-											</a>
-											<a title="积家" href="" >
-												<img class="lazy" src="../img/147220021278727.png" >
-												<p>积家</p>
-											</a>
-											<a title="伯爵" href="" >
-												<img class="lazy" src="../img/147220021278727.png" >
-												<p>伯爵</p>
-											</a>
-											<a title="宝玑" href="" >
-												<img class="lazy" src="../img/147220021278727.png" >
-												<p>宝玑</p>
-											</a>
-											<a title="宝珀" href="" >
-												<img class="lazy" src="../img/147220021278727.png" >
-												<p>宝珀</p>
-											</a>
-											<a title="柏高" href="" >
-												<img class="lazy" src="../img/147220021278727.png" >
-												<p>柏高</p>
-											</a>
-										</div>
-									</div>
-									<div class="col col-2">
-										<div class="t">精选推荐&gt;</div>
-										<div class="arc-list">
-											<a  href="">宝玑<span>|</span></a>
-											<a  href="">宝珀<span>|</span></a>
-											<a  href="">积家<span>|</span></a>
-											<a  href="">朗格<span>|</span></a>
-											<a  href="">格拉苏蒂∙原创<span>|</span></a>
-											<a  href="">爱彼<span>|</span></a>
-											<a  href="">伯爵<span>|</span></a>
-											<a  href="">雅克德罗<span>|</span></a>
-											<a  href="">芝柏<span>|</span></a>
-											<a  href="">雅典<span>|</span></a>
-											<a  href="">法穆兰<span>|</span></a>
-										</div>
-									</div>
-									<div class="col col-3">
-										<div class="t">促销精选&gt;</div>
-										<div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
-											<a rel="nofollow"  href="">“表王”百达翡丽<span>|</span></a>
-											<a rel="nofollow"  href="">珍稀罕有，亨利慕时<span>|</span></a>
-											<a rel="nofollow"  href="">宝玑<span>|</span></a>
-											<a rel="nofollow"  href="">积家手表<span>|</span></a>
-										</div>
-									</div>
-								</dd>
-							</dl>
-						</div>
-						
-					</div>
-				</div>
-				<div class="m">
-					<h2 class="nav_tit2"><a href="#">选表中心</a></h2>
-					<h2 class="nav_tit2"><a href="#">线下体验</a></h2>
-					<h2 class="nav_tit2"><a href="#">名匠维修</a></h2>
-					<h2 class="nav_tit2"><a href="#">全球购表</a></h2>
-					<h2 class="nav_tit2"><a href="#">闪购特惠<img class="hot_img" src="../img/xb_hot.png" class="hot"/></a></h2>
-					<h2 class="nav_tit2"><a href="#">会员福利</a></h2>
-					<h2 class="nav_tit2"><a href="#">钟表文化</a></h2>
-				</div>
-			</div>
-			<div id="dropdown_1">
-				<div class="droptype_list">						
-					<div class="droptype">
-						<a href=""><h2>男表</h2></a>
-						<a href="">
-							<img src="../img-2/148738149447936.jpg"/>
-						</a>
-						<div class="con_txt">
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-								</li>
-							</ul>
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-								</li>
-							</ul>
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px; border: none;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02" style="width: 184px;">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="droptype">
-						<a href=""><h2>男表</h2></a>
-						<a href="">
-							<img src="../img-2/148738149493915.jpg"/>
-						</a>
-						<div class="con_txt">
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-								</li>
-							</ul>
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-								</li>
-							</ul>
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px; border: none;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02" style="width: 184px;">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="droptype">
-						<a href=""><h2>男表</h2></a>
-						<a href="">
-							<img src="../img-2/148738149462755.jpg"/>
-						</a>
-						<div class="con_txt">
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-								</li>
-							</ul>
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-								</li>
-							</ul>
-							<ul class="clearfix2" style="width: 290px; margin-top: 10px; border: none;">
-								<li class="txt_li01" style="margin-right: 20px;">
-									<a href="">款式风格&gt;</a>
-								</li>
-								<li class="txt_li02" style="width: 184px;">
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-									<a class="a" href="">时尚</a>
-									<a class="a" href="">正装</a>
-									<a class="a" href="">商务休闲</a>
-									<a class="a" href="">运动</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>	
-		
-		<div class="main">
-			<div id="mainbg" style="position: relative;">
-				<div class="i-panel" id="i-panel" style="display: none;">
-					<div class="i-wrap">
-						<a href="javascript:;" class="">热销<i class="i__yrp"></i></a>
-						<a href="javascript:;" class="">闪购<i class="i__yrp"></i></a>
-						<a href="javascript:;" class="">新品<i class="i__yrp"></i></a>
-						<a href="javascript:;" class="">品牌<i class="i__yrp"></i></a>
-						<a href="javascript:;" class="">
-							<div class="first">猜你</div>
-							<div>喜欢</div><i class="i__yrp"></i>
-						</a>
-						<a href="javascript:;" class="">晒单<i class="i__yrp"></i></a>
-						<a href="javascript:;" class="">资讯<i class="i__yrp"></i></a>
-					</div>
-				</div>
-				<div class="floor">
-					<div class="cf">
-						<div class="cf_img">
-							<ul></ul>
-						</div>
-						<div class="cf_rl">
-							<div class="cf_rl_dir">
-								<a rel="#" class="cf_prev"></a>
-								<a rel="#" class="cf_next"></a>
-							</div>
-						</div>
-						<div class="cf_boadr">
-							<div class="cf_lb cf_bkt"></div>
-							<div class="cf_boadr_pager">
-								<div class="cf_mask"></div>
-							</div>
-							<div class="cf_rb cf_bkt"></div>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<div class="floor f2">
-					<div class="f2_t">
-						<ul>
-							<li>
-								<a href="#">
-									<i class="t01" ></i>
-									自营正品直购
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="t02" ></i>
-									专业腕表导购
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="t03" ></i>
-									全国实体店体验
-								</a>
-							</li>
-							<li style="background: none;">
-								<a href="#">
-									<i class="t04" ></i>
-									专业保养维修
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="wrap">
-						<div class="f2_b rel">
-							<ul>
-								<li>
-									<img src="../img/149665080444881.png">
-								</li>
-								<li>
-									<img src="../img/149665082440946.png">
-								</li>
-								<li>
-									<img src="../img/149665085862639.png">
-								</li>
-								<li style="margin-right: 0;">
-									<img src="../img/149665281753672.png">
-								</li>
-							</ul>
-						</div>
-						<div class="bx-controls bx-has-controls-direction rel" >
-							<div class="bx-controls-direction">
-								<a class="bx-prev disabled" href="">Prev</a>
-								<a class="bx-next disabled" href="">Next</a>
-							</div>
-						</div>
-						<div class="clear"></div>
-					</div>
-				</div>
-				<div class="floor innerfloor">
-					<div class="wrap">
-						<div class="contain">
-							<div class="heading">
-								<div class="fl">
-									<h3>
-										<a href="#">
-											热销
-											<span class="hot"></span>
-										</a>
-									</h3>
-								</div>
-								<div class="fr">
-									<a href="#">高性价比商务表</a><span>/</span>
-									<a href="#">天梭，浪琴</a><span>/</span>
-									<a href="#">运动表</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="m">
-								<div class="cf_1">
-									<div class="cf_1img">
-										<ul>
-											<li>
-												<img src="../img/149761174016494.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/150509603274877.jpg"/>
-												<div class="title">
-													<p class="p1">天梭力洛克系列</p>
-													<p class="p2">限量赠送积优表带</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/150538608122525.jpg"/>
-												<div class="title">
-													<p class="p1">表带专场 邂逅腕表的美</p>
-													<p class="p2">全场低至3.4折</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/149761174062834.jpg"/>
-												<div class="title">
-													<p class="p1">瑞士库尔沃</p>
-													<p class="p2">丘吉尔等名人的选择</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="cf_1board">
-										<div class="cf_1page">
-											<a href="#" class="cf_1page_link active">0</a>
-											<a href="#" class="cf_1page_link">1</a>
-											<a href="#" class="cf_1page_link">2</a>
-											<a href="#" class="cf_1page_link">3</a>
-										</div>
-									</div>
-									<div class="cf_1rl">
-										<a rel="#" class="cf_1prev"></a>
-										<a rel="#" class="cf_1next"></a>
-									</div>
-								</div>
-							</div>
-							<div class="r list">
-								<div class="fl">
-									<a href="#">
-										<p class="p1">
-											<img src="../img/149510441048664.jpg"/>
-										</p>
-										<p class="p2">法国赫柏林</p>
-										<p class="p3">69折热销绅士男款</p>
-									</a>
-								</div>
-								<div class="fr">
-									<a href="epos.html?id=201">
-										<img src="../img/150650221536957.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">天梭TISSOT</p>
-											<p class="p3">赠送表带 7.4折</p>
-										</div>
-									</a>
-									<a href="epos.html?id=301">
-										<img src="../img/150650221624867.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">迪沃斯DAVOSA</p>
-											<p class="p3">6折 品牌爆款</p>
-										</div>
-									</a>
-									<a  href="epos.html?id=401">
-										<img src="../img/150650257652999.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">浪琴longines</p>
-											<p class="p3">经典名匠 8折</p>
-										</div>
-									</a>
-									<a  href="">
-										<img src="../img/150650221536957.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">爱宝时EPOS</p>
-											<p class="p3">激薄 钻石银-白金</p>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="brand_logo">
-								<div class="logo_box">
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="floor innerfloor">
-					<div class="wrap">
-						<div class="contain">
-							<div class="heading">
-								<div class="fl">
-									<h3>
-										<a href="#">
-											热销
-											<span class="hot"></span>
-										</a>
-									</h3>
-								</div>
-								<div class="fr">
-									<a href="#">高性价比商务表</a><span>/</span>
-									<a href="#">天梭，浪琴</a><span>/</span>
-									<a href="#">运动表</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="m">
-								<div class="cf_1">
-									<div class="cf_1img">
-										<ul>
-											<li>
-												<img src="../img/149761174016494.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/150509603274877.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/150538608122525.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/149761174062834.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="cf_1board">
-										<div class="cf_1page">
-											<a href="#" class="cf_1page_link active">0</a>
-											<a href="#" class="cf_1page_link">1</a>
-											<a href="#" class="cf_1page_link">2</a>
-											<a href="#" class="cf_1page_link">3</a>
-										</div>
-									</div>
-									<div class="cf_1rl">
-										<a rel="#" class="cf_1prev"></a>
-										<a rel="#" class="cf_1next"></a>
-									</div>
-								</div>
-							</div>
-							<div class="r list">
-								<div class="fl">
-									<a href="#">
-										<p class="p1">
-											<img src="../img/149510441048664.jpg"/>
-										</p>
-										<p class="p2">法国赫柏林</p>
-										<p class="p3">69折热销绅士男款</p>
-									</a>
-								</div>
-								<div class="fr">
-									<a href="#">
-										<img src="../img/150650221536957.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">天梭TISSOT</p>
-											<p class="p3">赠送表带 7.4折</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650221624867.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">迪沃斯DAVOSA</p>
-											<p class="p3">6折 品牌爆款</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650257652999.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">浪琴longines</p>
-											<p class="p3">经典名匠 8折</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650221536957.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">爱宝时EPOS</p>
-											<p class="p3">激薄 钻石银-白金</p>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="brand_logo">
-								<div class="logo_box">
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="floor innerfloor">
-					<div class="wrap">
-						<div class="contain">
-							<div class="heading">
-								<div class="fl">
-									<h3>
-										<a href="#">
-											热销
-											<span class="hot"></span>
-										</a>
-									</h3>
-								</div>
-								<div class="fr">
-									<a href="#">高性价比商务表</a><span>/</span>
-									<a href="#">天梭，浪琴</a><span>/</span>
-									<a href="#">运动表</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="m">
-								<div class="cf_1">
-									<div class="cf_1img">
-										<ul>
-											<li>
-												<img src="../img/149761174016494.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/150509603274877.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/150538608122525.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-											<li>
-												<img src="../img/149761174062834.jpg"/>
-												<div class="title">
-													<p class="p1">爱宝时激薄至简商务腕表</p>
-													<p class="p2">满3000立减100元</p>
-												</div>
-											</li>
-										</ul>
-									</div>
-									<div class="cf_1board">
-										<div class="cf_1page">
-											<a href="#" class="cf_1page_link active">0</a>
-											<a href="#" class="cf_1page_link">1</a>
-											<a href="#" class="cf_1page_link">2</a>
-											<a href="#" class="cf_1page_link">3</a>
-										</div>
-									</div>
-									<div class="cf_1rl">
-										<a rel="#" class="cf_1prev"></a>
-										<a rel="#" class="cf_1next"></a>
-									</div>
-								</div>
-							</div>
-							<div class="r list">
-								<div class="fl">
-									<a href="#">
-										<p class="p1">
-											<img src="../img/149510441048664.jpg"/>
-										</p>
-										<p class="p2">法国赫柏林</p>
-										<p class="p3">69折热销绅士男款</p>
-									</a>
-								</div>
-								<div class="fr">
-									<a href="#">
-										<img src="../img/150650221536957.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">天梭TISSOT</p>
-											<p class="p3">赠送表带 7.4折</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650221624867.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">迪沃斯DAVOSA</p>
-											<p class="p3">6折 品牌爆款</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650257652999.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">浪琴longines</p>
-											<p class="p3">经典名匠 8折</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650221536957.jpg" alt="" />
-										<div class="p_txt">
-											<p class="p2">爱宝时EPOS</p>
-											<p class="p3">激薄 钻石银-白金</p>
-										</div>
-									</a>
-								</div>
-							</div>
-							<div class="clear"></div>
-							<div class="brand_logo">
-								<div class="logo_box">
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-									<a href="#">
-										<img src="../img/147220075791189.png" alt="" />
-										<i style="display: none;">天梭</i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="floor">
-					<div class="wrap">
-						<div class="heading">
-							<div class="fl">
-								<h3>
-									<a href="#">
-										品牌馆
-										<span class="brand"></span>
-									</a>
-								</h3>
-							</div>
-							<div class="fr">
-								<a href="#">高性价比商务表</a><span>/</span>
-								<a href="#">天梭，浪琴</a><span>/</span>
-								<a href="#">运动表</a>
-							</div>
-						</div>
-						<div class="brand_msg">
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150060704327882.jpg" alt="" />
-								</p>
-								<p class="p2">
-									<img src="../img/147220021267169.png" alt="" />
-								</p>
-								<p class="p3">瑞士著名钟表制造商</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150060704327882.jpg" alt="" />
-								</p>
-								<p class="p2">
-									<img src="../img/147220021267169.png" alt="" />
-								</p>
-								<p class="p3">瑞士著名钟表制造商</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150060704327882.jpg" alt="" />
-								</p>
-								<p class="p2">
-									<img src="../img/147220021267169.png" alt="" />
-								</p>
-								<p class="p3">瑞士著名钟表制造商</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150060704327882.jpg" alt="" />
-								</p>
-								<p class="p2">
-									<img src="../img/147220021267169.png" alt="" />
-								</p>
-								<p class="p3">瑞士著名钟表制造商</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150060704327882.jpg" alt="" />
-								</p>
-								<p class="p2">
-									<img src="../img/147220021267169.png" alt="" />
-								</p>
-								<p class="p3">瑞士著名钟表制造商</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150060704327882.jpg" alt="" />
-								</p>
-								<p class="p2">
-									<img src="../img/147220021267169.png" alt="" />
-								</p>
-								<p class="p3">瑞士著名钟表制造商</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150060704327882.jpg" alt="" />
-								</p>
-								<p class="p2">
-									<img src="../img/147220021267169.png" alt="" />
-								</p>
-								<p class="p3">瑞士著名钟表制造商</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150060704327882.jpg" alt="" />
-								</p>
-								<p class="p2">
-									<img src="../img/147220021267169.png" alt="" />
-								</p>
-								<p class="p3">瑞士著名钟表制造商</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="floor">
-					<div class="wrap">
-						<div class="heading">
-							<div class="fl">
-								<h3>
-									<a href="#">
-										猜你喜欢
-										<span class="like"></span>
-									</a>
-								</h3>
-							</div>
-							<div class="fr">
-								<a href="#">
-									<i class="i__refresh"></i>
-									换一批
-								</a>
-							</div>
-						</div>
-						<div class="guess_like">
-							<div class="fl">
-								<a href="#">
-									<img src="../img/147220021281731.png" alt="" />
-								</a>
-								<a href="#">
-									<img src="../img/150753596780488.png" alt="" />
-								</a>
-								<div class="txt">
-									<a href="#" target="">爆款</a>
-									<a href="#" target="">正装表</a>
-									<a href="#" target="">劳力士</a>
-									<a href="#" target="">女星同款</a>
-									<a href="#" target="">智能表</a>
-									<a href="#" target="">线下体验店</a>
-								</div>
-							</div>
-							<div class="fr">
-								<div class="rel">
-									<a href="#">
-										<img src="../img/150650221624867.jpg" alt="" />
-										<div class="txt">
-											<p class="p1">
-												浪琴-蓝钢指针 
-											</p>
-											<p class="p2">
-												<span class="rmb">￥12000</span>
-												<span class="dcount">【8折】</span>
-											</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650221624867.jpg" alt="" />
-										<div class="txt">
-											<p class="p1">
-												浪琴-蓝钢指针 
-											</p>
-											<p class="p2">
-												<span class="rmb">￥12000</span>
-												<span class="dcount">【8折】</span>
-											</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650221624867.jpg" alt="" />
-										<div class="txt">
-											<p class="p1">
-												浪琴-蓝钢指针 
-											</p>
-											<p class="p2">
-												<span class="rmb">￥12000</span>
-												<span class="dcount">【8折】</span>
-											</p>
-										</div>
-									</a>
-									<a href="#">
-										<img src="../img/150650221624867.jpg" alt="" />
-										<div class="txt">
-											<p class="p1">
-												浪琴-蓝钢指针 
-											</p>
-											<p class="p2">
-												<span class="rmb">￥12000</span>
-												<span class="dcount">【8折】</span>
-											</p>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-			</div>
-				<div class="floor">
-					<div class="wrap">
-						<div class="heading">
-							<div class="fl">
-								<h3>
-									<a href="#">
-										晒单作用
-										<span class="share"></span>
-									</a>
-								</h3>
-							</div>
-							<div class="fr">
-								<a href="#">
-									换一批
-									<i class="morebtn"></i>
-								</a>
-							</div>
-						</div>
-						<div class="brand_msg">
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150426348140210.jpg" alt="" />
-								</p>
-								<p class="ptxt">喜欢这块表很久了，感觉还不错</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150426348140210.jpg" alt="" />
-								</p>
-								<p class="ptxt">喜欢这块表很久了，感觉还不错</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150426348140210.jpg" alt="" />
-								</p>
-								<p class="ptxt">喜欢这块表很久了，感觉还不错</p>
-							</a>
-							<a href="#">
-								<p class="p1">
-									<img src="../img/150426348140210.jpg" alt="" />
-								</p>
-								<p class="ptxt">喜欢这块表很久了，感觉还不错</p>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="floor">
-				<div class="wrap">
-					<div class="fl cont_shop">
-						<div class="heading">
-							<div class="fl">
-								<h3>
-									<a href="#">
-										线下体验中心
-										<span class="shop"></span>
-									</a>
-								</h3>
-							</div>
-						</div>
-						<a href="#"><img src="../img/148842361087734.png" alt="" /></a>
-						<div class="gird">
-							<a href="#">广州</a>
-							<a href="#">茂名</a>
-							<a href="#">重庆</a>
-							<a href="#">平顶山</a>
-							<a href="#">荆州</a>
-							<a href="#">福州</a>
-						</div>
-					</div>
-					<div class="fr">
-						<div class="heading">
-							<div class="fl">
-								<h3>
-									<a href="#">
-										腕表资讯
-										<span class="news"></span>
-									</a>
-								</h3>
-							</div>
-							<div class="fr">
-								<a href="#">
-									更多资讯
-									<i class="morebtn"></i>
-								</a>
-							</div>
-						</div>
-						<div class="news_list">
-							<ul>
-								<li>
-									<h6>
-										<a href="#">[手表评论]</a>
-									</h6>
-									<a href="#">
-										•&nbsp;感觉真的不错，这个手表品牌之前虽然听的不多，但了解后发现这是很有潜力牌子，希望越做越好！谢谢客服唐唐推荐，100个好评
-									</a>
-									<a href="#">
-										•&nbsp;买的银色款，也很漂亮，给万表一个赞
-									</a>
-									<a href="#">
-										•&nbsp;表很正，没问题，追加一块美滋滋
-									</a>
-									<a href="#">
-										•&nbsp;万表网真的是太好了，手表百分百正品，带了一个月才来评价的，手表走时相当准，每天±3秒，一个月调一次表正好，还送了皮表带，证书和保修卡什么的都有，买表我绝对推荐万表网，真实感受。
-									</a>
-									<a href="#">
-										•&nbsp;手表戴了一个星期了，感觉还算良好，走时比较精准，看起来也比较大方。
-									</a>
-								</li>
-								<li>
-									<h6>
-										<a href="#">[手表专题]</a>
-									</h6>
-									<a href="#">
-										•&nbsp;苹果手机手表玫瑰金图片
-									</a>
-									<a href="#">
-										•&nbsp;什么表低调
-									</a>
-									<a href="#">
-										•&nbsp;阿玛尼手表女士
-									</a>
-									<a href="#">
-										•&nbsp;天梭手表TKL
-									</a>
-									<a href="#">
-										•&nbsp;防磁男表
-									</a>
-								</li>
-								<li>
-									<h6>
-										<a href="#">[手表学院]</a>
-									</h6>
-									<a href="#">
-										•&nbsp;德国莫勒潜水表怎么样，莫勒机芯是什么档次
-									</a>
-									<a href="#">
-										•&nbsp;机械表受磁什么症状_表现，手表进水、有雾受磁怎么办？
-									</a>
-									<a href="#">
-										•&nbsp;手表换电池注意什么，石英表电池多久换一次
-									</a>
-									<a href="#">
-										•&nbsp;钟表维修店价格怎么样？手表维修站点
-									</a>
-									<a href="#">
-										•&nbsp;汉米尔顿手表怎么换表镜方法分享
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>	
-		</div>	
-	
-		<div class="foot">
-			<div class="foot_1">
-				<div class="wrap">
-					<a href="#">
-						<span class="zp1"></span>
-						正品保障
-					</a>
-					<a href="#">
-						<span class="zp2"></span>
-						正品保障
-					</a>
-					<a href="#">
-						<span class="zp3"></span>
-						正品保障
-					</a>
-					<a href="#">
-						<span class="zp4"></span>
-						正品保障
-					</a>
-					<a href="#">
-						<span class="zp5"></span>
-						正品保障
-					</a>
-				</div>
-			</div>
-			<div class="foot_2">
-				<div class="wrap">
-					
-				</div>
-			</div>
-		</div>
-	</body>
+    <div class="top">
+        <div class="wrap">
+            <div class="fr">
+                <div class="b-block">
+                    <a href="{% url 'wanbiao:login' %}" target="_blank">登录</a>
+                    <a href="{% url 'wanbiao:register' %}" class="zc_on" target="_blank">注册（即送50元）</a>
+                </div>
+                <div class="b-block">
+                    <span>|</span>
+                    <a href="{% url 'wanbiao:cart' %}">我的订单</a>
+                </div>
+                <div class="b-block _hover">
+                    <span>|</span>
+                    <a href="#">手机万表</a>
+                    <div class="dropdown" id="dropdown"
+                         style="display: none;height: 226px;padding-top: 0px;margin-top: 0px;padding-bottom: 0px;margin-bottom: 0px;">
+                        <div class="img_box">
+                            <a href="#">
+                                <img src="../img/QRcode_wbapp.png" alt=""/>
+                            </a>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="img_box img_box2" style="display: none;">
+                            <a href="#">
+                                <img src="../img/143234662463629.png"/>
+                            </a>
+                        </div>
+                        <div class="tab_dropdown">
+                            <ul>
+                                <li class="tab_in">万表商城APP</li>
+                                <li>万表微信服务号</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="b-block">
+                    <a href="#">办理信用卡</a>
+                </div>
+                <div class="b-block">
+                    <a href="#">服务专线</a>
+                </div>
+                <div class="b-block">
+                    <span>|</span>
+                    <a href="#">English</a>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="head">
+        <div class="wrap">
+            <div class="logo fl rel">
+                <div class="fl rel">
+                    <div class="logo_1">
+                        <a href="#" class="b_logo"></a>
+                    </div>
+                </div>
+                <div class="logo_2 fl rel">
+                    <a href="#"><img src="../img/149421866385797.gif"/></a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="m_r fr">
+                <div class="m">
+                    <form class="srh" action="#" method="get">
+                        <label for="ipt" class="lab" ;>
+                            <input type="text" class="ipt" value="瑞士表"/>
+                        </label>
+                        <input class="btn" type="button" value="搜索"/>
+                        <div class="clear"></div>
+                    </form>
+                    <div class="m_b">
+                        <a href="#">天梭</a><a href="#">迪沃斯5周年庆，满5000减500</a>
+                    </div>
+                </div>
+                <div class="fr rel btncar">
+                    <a href="cart.html" class="">
+                        <span class="car"></span>购物车
+                        <div class="b_cnt"><p>0</p></div>
+                    </a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="wrap">
+            <div class="fl">
+                <h2 class="nav_tit"><a href="#">全部腕表</a></h2>
+                <div class="menu">
+                    <div class="box">
+                        <dl>
+                            <dt><a href="#">&nbsp;&nbsp;顶级品牌</a></dt>
+                            <dd>
+                                <a href="#">百达翡丽</a>
+                                <a href="#">亨利·慕时</a>
+                                <a href="#">积家</a>
+                                <a href="#">柏高</a>
+                            </dd>
+                            <dd class="b-aside">
+                                <div class="col col-1">
+                                    <div class="t">顶级品牌&gt;</div>
+                                    <div class="bra-list">
+                                        <a title="百达翡丽" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>百达翡丽</p>
+                                        </a>
+                                        <a title="江诗丹顿" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>江诗丹顿</p>
+                                        </a>
+                                        <a title="亨利·慕时" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>亨利·慕时</p>
+                                        </a>
+                                        <a title="积家" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>积家</p>
+                                        </a>
+                                        <a title="伯爵" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>伯爵</p>
+                                        </a>
+                                        <a title="宝玑" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>宝玑</p>
+                                        </a>
+                                        <a title="宝珀" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>宝珀</p>
+                                        </a>
+                                        <a title="柏高" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>柏高</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col col-2">
+                                    <div class="t">精选推荐&gt;</div>
+                                    <div class="arc-list">
+                                        <a href="">柏高<span>|</span></a>
+                                        <a href="">亨利·慕时<span>|</span></a>
+                                        <a href="">百达翡丽<span>|</span></a>
+                                        <a href="">江诗丹顿<span>|</span></a>
+                                        <a href="">宝玑<span>|</span></a>
+                                        <a href="">宝珀<span>|</span></a>
+                                        <a href="">积家<span>|</span></a>
+                                        <a href="">朗格<span>|</span></a>
+                                        <a href="">格拉苏蒂∙原创<span>|</span></a>
+                                        <a href="">爱彼<span>|</span></a>
+                                        <a href="">伯爵<span>|</span></a>
+                                        <a href="">雅克德罗<span>|</span></a>
+                                        <a href="">芝柏<span>|</span></a>
+                                        <a href="">雅典<span>|</span></a>
+                                        <a href="">法穆兰<span>|</span></a>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="t">促销精选&gt;</div>
+                                    <div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
+                                        <a rel="nofollow" href="">“表王”百达翡丽<span>|</span></a>
+                                        <a rel="nofollow" href="">珍稀罕有，亨利慕时<span>|</span></a>
+                                        <a rel="nofollow" href="">宝玑<span>|</span></a>
+                                        <a rel="nofollow" href="">积家手表<span>|</span></a>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="box">
+                        <dl>
+                            <dt><a href="#">&nbsp;&nbsp;奢华品牌</a></dt>
+                            <dd>
+                                <a href="#">欧米茄</a>
+                                <a href="#">劳力士</a>
+                                <a href="#">库尔沃</a>
+                                <a href="#">莫勒</a>
+                            </dd>
+                            <dd class="b-aside">
+                                <div class="col col-1">
+                                    <div class="t">顶级品牌&gt;</div>
+                                    <div class="bra-list">
+                                        <a title="百达翡丽" href="">
+                                            <img class="lazy" src="../img/147220021267169.png">
+                                            <p>百达翡丽</p>
+                                        </a>
+                                        <a title="江诗丹顿" href="">
+                                            <img class="lazy" src="../img/147220021267169.png">
+                                            <p>江诗丹顿</p>
+                                        </a>
+                                        <a title="亨利·慕时" href="">
+                                            <img class="lazy" src="../img/147220021267169.png">
+                                            <p>亨利·慕时</p>
+                                        </a>
+                                        <a title="积家" href="">
+                                            <img class="lazy" src="../img/147220021267169.png">
+                                            <p>积家</p>
+                                        </a>
+                                        <a title="伯爵" href="">
+                                            <img class="lazy" src="../img/147220021267169.png">
+                                            <p>伯爵</p>
+                                        </a>
+                                        <a title="宝玑" href="">
+                                            <img class="lazy" src="../img/147220021267169.png">
+                                            <p>宝玑</p>
+                                        </a>
+                                        <a title="宝珀" href="">
+                                            <img class="lazy" src="../img/147220021267169.png">
+                                            <p>宝珀</p>
+                                        </a>
+                                        <a title="柏高" href="">
+                                            <img class="lazy" src="../img/147220021267169.png">
+                                            <p>柏高</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col col-2">
+                                    <div class="t">精选推荐&gt;</div>
+                                    <div class="arc-list">
+                                        <a href="">积家<span>|</span></a>
+                                        <a href="">朗格<span>|</span></a>
+                                        <a href="">格拉苏蒂∙原创<span>|</span></a>
+                                        <a href="">爱彼<span>|</span></a>
+                                        <a href="">伯爵<span>|</span></a>
+                                        <a href="">雅克德罗<span>|</span></a>
+                                        <a href="">芝柏<span>|</span></a>
+                                        <a href="">雅典<span>|</span></a>
+                                        <a href="">法穆兰<span>|</span></a>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="t">促销精选&gt;</div>
+                                    <div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
+                                        <a rel="nofollow" href="">“表王”百达翡丽<span>|</span></a>
+                                        <a rel="nofollow" href="">珍稀罕有，亨利慕时<span>|</span></a>
+                                        <a rel="nofollow" href="">宝玑<span>|</span></a>
+                                        <a rel="nofollow" href="">积家手表<span>|</span></a>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="box">
+                        <dl>
+                            <dt><a href="#">&nbsp;&nbsp;轻奢品牌</a></dt>
+                            <dd>
+                                <a href="#">天梭</a>
+                                <a href="#">迪沃斯</a>
+                                <a href="#">浪琴</a>
+                                <a href="#">赫柏林</a>
+                            </dd>
+                            <dd class="b-aside">
+                                <div class="col col-1">
+                                    <div class="t">顶级品牌&gt;</div>
+                                    <div class="bra-list">
+                                        <a title="百达翡丽" href="">
+                                            <img class="lazy" src="../img/147220174092976.png">
+                                            <p>百达翡丽</p>
+                                        </a>
+                                        <a title="江诗丹顿" href="">
+                                            <img class="lazy" src="../img/147220174092976.png">
+                                            <p>江诗丹顿</p>
+                                        </a>
+                                        <a title="亨利·慕时" href="">
+                                            <img class="lazy" src="../img/147220174092976.png">
+                                            <p>亨利·慕时</p>
+                                        </a>
+                                        <a title="积家" href="">
+                                            <img class="lazy" src="../img/147220174092976.png">
+                                            <p>积家</p>
+                                        </a>
+                                        <a title="伯爵" href="">
+                                            <img class="lazy" src="../img/147220174092976.png">
+                                            <p>伯爵</p>
+                                        </a>
+                                        <a title="宝玑" href="">
+                                            <img class="lazy" src="../img/147220174092976.png">
+                                            <p>宝玑</p>
+                                        </a>
+                                        <a title="宝珀" href="">
+                                            <img class="lazy" src="../img/147220174092976.png">
+                                            <p>宝珀</p>
+                                        </a>
+                                        <a title="柏高" href="">
+                                            <img class="lazy" src="../img/147220174092976.png">
+                                            <p>柏高</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col col-2">
+                                    <div class="t">精选推荐&gt;</div>
+                                    <div class="arc-list">
+                                        <a href="">柏高<span>|</span></a>
+                                        <a href="">亨利·慕时<span>|</span></a>
+                                        <a href="">百达翡丽<span>|</span></a>
+                                        <a href="">江诗丹顿<span>|</span></a>
+                                        <a href="">宝玑<span>|</span></a>
+                                        <a href="">宝珀<span>|</span></a>
+                                        <a href="">积家<span>|</span></a>
+                                        <a href="">朗格<span>|</span></a>
+                                        <a href="">格拉苏蒂∙原创<span>|</span></a>
+                                        <a href="">爱彼<span>|</span></a>
+                                        <a href="">伯爵<span>|</span></a>
+                                        <a href="">雅克德罗<span>|</span></a>
+                                        <a href="">芝柏<span>|</span></a>
+                                        <a href="">雅典<span>|</span></a>
+                                        <a href="">法穆兰<span>|</span></a>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="t">促销精选&gt;</div>
+                                    <div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
+                                        <a rel="nofollow" href="">“表王”百达翡丽<span>|</span></a>
+                                        <a rel="nofollow" href="">珍稀罕有，亨利慕时<span>|</span></a>
+                                        <a rel="nofollow" href="">宝玑<span>|</span></a>
+                                        <a rel="nofollow" href="">积家手表<span>|</span></a>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="box">
+                        <dl>
+                            <dt><a href="#">&nbsp;&nbsp;时尚、潮牌</a></dt>
+                            <dd>
+                                <a href="#">卡西欧</a>
+                                <a href="#">CK</a>
+                                <a href="#">MINI</a>
+                                <a href="#">阿玛尼</a>
+                                <a href="#">DW</a>
+                            </dd>
+                            <dd class="b-aside">
+                                <div class="col col-1">
+                                    <div class="t">顶级品牌&gt;</div>
+                                    <div class="bra-list">
+                                        <a title="百达翡丽" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>百达翡丽</p>
+                                        </a>
+                                        <a title="江诗丹顿" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>江诗丹顿</p>
+                                        </a>
+                                        <a title="亨利·慕时" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>亨利·慕时</p>
+                                        </a>
+                                        <a title="积家" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>积家</p>
+                                        </a>
+                                        <a title="伯爵" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>伯爵</p>
+                                        </a>
+                                        <a title="宝玑" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>宝玑</p>
+                                        </a>
+                                        <a title="宝珀" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>宝珀</p>
+                                        </a>
+                                        <a title="柏高" href="">
+                                            <img class="lazy" src="../img/147219975729781.png">
+                                            <p>柏高</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col col-2">
+                                    <div class="t">精选推荐&gt;</div>
+                                    <div class="arc-list">
+                                        <a href="">百达翡丽<span>|</span></a>
+                                        <a href="">江诗丹顿<span>|</span></a>
+                                        <a href="">宝玑<span>|</span></a>
+                                        <a href="">宝珀<span>|</span></a>
+                                        <a href="">积家<span>|</span></a>
+                                        <a href="">朗格<span>|</span></a>
+                                        <a href="">格拉苏蒂∙原创<span>|</span></a>
+                                        <a href="">爱彼<span>|</span></a>
+                                        <a href="">伯爵<span>|</span></a>
+                                        <a href="">雅克德罗<span>|</span></a>
+                                        <a href="">芝柏<span>|</span></a>
+                                        <a href="">雅典<span>|</span></a>
+                                        <a href="">法穆兰<span>|</span></a>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="t">促销精选&gt;</div>
+                                    <div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
+                                        <a rel="nofollow" href="">“表王”百达翡丽<span>|</span></a>
+                                        <a rel="nofollow" href="">珍稀罕有，亨利慕时<span>|</span></a>
+                                        <a rel="nofollow" href="">宝玑<span>|</span></a>
+                                        <a rel="nofollow" href="">积家手表<span>|</span></a>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="box">
+                        <dl>
+                            <dt><a href="#">&nbsp;&nbsp;智能表、国产表</a></dt>
+                            <dd>
+                                <a href="#">飞亚达</a>
+                                <a href="#">华为</a>
+                                <a href="#">海鸥</a>
+                                <a href="#">爱普生</a>
+                                <a href="#">表带</a>
+                            </dd>
+                            <dd class="b-aside">
+                                <div class="col col-1">
+                                    <div class="t">顶级品牌&gt;</div>
+                                    <div class="bra-list">
+                                        <a title="百达翡丽" href="">
+                                            <img class="lazy" src="../img/147220021278727.png">
+                                            <p>百达翡丽</p>
+                                        </a>
+                                        <a title="江诗丹顿" href="">
+                                            <img class="lazy" src="../img/147220021278727.png">
+                                            <p>江诗丹顿</p>
+                                        </a>
+                                        <a title="亨利·慕时" href="">
+                                            <img class="lazy" src="../img/147220021278727.png">
+                                            <p>亨利·慕时</p>
+                                        </a>
+                                        <a title="积家" href="">
+                                            <img class="lazy" src="../img/147220021278727.png">
+                                            <p>积家</p>
+                                        </a>
+                                        <a title="伯爵" href="">
+                                            <img class="lazy" src="../img/147220021278727.png">
+                                            <p>伯爵</p>
+                                        </a>
+                                        <a title="宝玑" href="">
+                                            <img class="lazy" src="../img/147220021278727.png">
+                                            <p>宝玑</p>
+                                        </a>
+                                        <a title="宝珀" href="">
+                                            <img class="lazy" src="../img/147220021278727.png">
+                                            <p>宝珀</p>
+                                        </a>
+                                        <a title="柏高" href="">
+                                            <img class="lazy" src="../img/147220021278727.png">
+                                            <p>柏高</p>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col col-2">
+                                    <div class="t">精选推荐&gt;</div>
+                                    <div class="arc-list">
+                                        <a href="">宝玑<span>|</span></a>
+                                        <a href="">宝珀<span>|</span></a>
+                                        <a href="">积家<span>|</span></a>
+                                        <a href="">朗格<span>|</span></a>
+                                        <a href="">格拉苏蒂∙原创<span>|</span></a>
+                                        <a href="">爱彼<span>|</span></a>
+                                        <a href="">伯爵<span>|</span></a>
+                                        <a href="">雅克德罗<span>|</span></a>
+                                        <a href="">芝柏<span>|</span></a>
+                                        <a href="">雅典<span>|</span></a>
+                                        <a href="">法穆兰<span>|</span></a>
+                                    </div>
+                                </div>
+                                <div class="col col-3">
+                                    <div class="t">促销精选&gt;</div>
+                                    <div class="pro-list"><a rel="nofollow" href="">瑞士柏高<span>|</span></a>
+                                        <a rel="nofollow" href="">“表王”百达翡丽<span>|</span></a>
+                                        <a rel="nofollow" href="">珍稀罕有，亨利慕时<span>|</span></a>
+                                        <a rel="nofollow" href="">宝玑<span>|</span></a>
+                                        <a rel="nofollow" href="">积家手表<span>|</span></a>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+
+                </div>
+            </div>
+            <div class="m">
+                <h2 class="nav_tit2"><a href="#">选表中心</a></h2>
+                <h2 class="nav_tit2"><a href="#">线下体验</a></h2>
+                <h2 class="nav_tit2"><a href="#">名匠维修</a></h2>
+                <h2 class="nav_tit2"><a href="#">全球购表</a></h2>
+                <h2 class="nav_tit2"><a href="#">闪购特惠<img class="hot_img" src="../img/xb_hot.png" class="hot"/></a></h2>
+                <h2 class="nav_tit2"><a href="#">会员福利</a></h2>
+                <h2 class="nav_tit2"><a href="#">钟表文化</a></h2>
+            </div>
+        </div>
+        <div id="dropdown_1">
+            <div class="droptype_list">
+                <div class="droptype">
+                    <a href=""><h2>男表</h2></a>
+                    <a href="">
+                        <img src="../img-2/148738149447936.jpg"/>
+                    </a>
+                    <div class="con_txt">
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                            </li>
+                        </ul>
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                            </li>
+                        </ul>
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px; border: none;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02" style="width: 184px;">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="droptype">
+                    <a href=""><h2>男表</h2></a>
+                    <a href="">
+                        <img src="../img-2/148738149493915.jpg"/>
+                    </a>
+                    <div class="con_txt">
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                            </li>
+                        </ul>
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                            </li>
+                        </ul>
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px; border: none;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02" style="width: 184px;">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="droptype">
+                    <a href=""><h2>男表</h2></a>
+                    <a href="">
+                        <img src="../img-2/148738149462755.jpg"/>
+                    </a>
+                    <div class="con_txt">
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                            </li>
+                        </ul>
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                            </li>
+                        </ul>
+                        <ul class="clearfix2" style="width: 290px; margin-top: 10px; border: none;">
+                            <li class="txt_li01" style="margin-right: 20px;">
+                                <a href="">款式风格&gt;</a>
+                            </li>
+                            <li class="txt_li02" style="width: 184px;">
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                                <a class="a" href="">时尚</a>
+                                <a class="a" href="">正装</a>
+                                <a class="a" href="">商务休闲</a>
+                                <a class="a" href="">运动</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="main">
+        <div id="mainbg" style="position: relative;">
+            <div class="i-panel" id="i-panel" style="display: none;">
+                <div class="i-wrap">
+                    <a href="javascript:;" class="">热销<i class="i__yrp"></i></a>
+                    <a href="javascript:;" class="">闪购<i class="i__yrp"></i></a>
+                    <a href="javascript:;" class="">新品<i class="i__yrp"></i></a>
+                    <a href="javascript:;" class="">品牌<i class="i__yrp"></i></a>
+                    <a href="javascript:;" class="">
+                        <div class="first">猜你</div>
+                        <div>喜欢</div>
+                        <i class="i__yrp"></i>
+                    </a>
+                    <a href="javascript:;" class="">晒单<i class="i__yrp"></i></a>
+                    <a href="javascript:;" class="">资讯<i class="i__yrp"></i></a>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="cf">
+                    <div class="cf_img">
+                        <ul></ul>
+                    </div>
+                    <div class="cf_rl">
+                        <div class="cf_rl_dir">
+                            <a rel="#" class="cf_prev"></a>
+                            <a rel="#" class="cf_next"></a>
+                        </div>
+                    </div>
+                    <div class="cf_boadr">
+                        <div class="cf_lb cf_bkt"></div>
+                        <div class="cf_boadr_pager">
+                            <div class="cf_mask"></div>
+                        </div>
+                        <div class="cf_rb cf_bkt"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="floor f2">
+                <div class="f2_t">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="t01"></i>
+                                自营正品直购
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="t02"></i>
+                                专业腕表导购
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="t03"></i>
+                                全国实体店体验
+                            </a>
+                        </li>
+                        <li style="background: none;">
+                            <a href="#">
+                                <i class="t04"></i>
+                                专业保养维修
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="wrap">
+                    <div class="f2_b rel">
+                        <ul>
+                            <li>
+                                <img src="../img/149665080444881.png">
+                            </li>
+                            <li>
+                                <img src="../img/149665082440946.png">
+                            </li>
+                            <li>
+                                <img src="../img/149665085862639.png">
+                            </li>
+                            <li style="margin-right: 0;">
+                                <img src="../img/149665281753672.png">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bx-controls bx-has-controls-direction rel">
+                        <div class="bx-controls-direction">
+                            <a class="bx-prev disabled" href="">Prev</a>
+                            <a class="bx-next disabled" href="">Next</a>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="floor innerfloor">
+                <div class="wrap">
+                    <div class="contain">
+                        <div class="heading">
+                            <div class="fl">
+                                <h3>
+                                    <a href="#">
+                                        热销
+                                        <span class="hot"></span>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="fr">
+                                <a href="#">高性价比商务表</a><span>/</span>
+                                <a href="#">天梭，浪琴</a><span>/</span>
+                                <a href="#">运动表</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="m">
+                            <div class="cf_1">
+                                <div class="cf_1img">
+                                    <ul>
+                                        <li>
+                                            <img src="../img/149761174016494.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/150509603274877.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">天梭力洛克系列</p>
+                                                <p class="p2">限量赠送积优表带</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/150538608122525.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">表带专场 邂逅腕表的美</p>
+                                                <p class="p2">全场低至3.4折</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/149761174062834.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">瑞士库尔沃</p>
+                                                <p class="p2">丘吉尔等名人的选择</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cf_1board">
+                                    <div class="cf_1page">
+                                        <a href="#" class="cf_1page_link active">0</a>
+                                        <a href="#" class="cf_1page_link">1</a>
+                                        <a href="#" class="cf_1page_link">2</a>
+                                        <a href="#" class="cf_1page_link">3</a>
+                                    </div>
+                                </div>
+                                <div class="cf_1rl">
+                                    <a rel="#" class="cf_1prev"></a>
+                                    <a rel="#" class="cf_1next"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r list">
+                            <div class="fl">
+                                <a href="#">
+                                    <p class="p1">
+                                        <img src="../img/149510441048664.jpg"/>
+                                    </p>
+                                    <p class="p2">法国赫柏林</p>
+                                    <p class="p3">69折热销绅士男款</p>
+                                </a>
+                            </div>
+                            <div class="fr">
+                                <a href="epos.html?id=201">
+                                    <img src="../img/150650221536957.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">天梭TISSOT</p>
+                                        <p class="p3">赠送表带 7.4折</p>
+                                    </div>
+                                </a>
+                                <a href="epos.html?id=301">
+                                    <img src="../img/150650221624867.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">迪沃斯DAVOSA</p>
+                                        <p class="p3">6折 品牌爆款</p>
+                                    </div>
+                                </a>
+                                <a href="epos.html?id=401">
+                                    <img src="../img/150650257652999.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">浪琴longines</p>
+                                        <p class="p3">经典名匠 8折</p>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <img src="../img/150650221536957.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">爱宝时EPOS</p>
+                                        <p class="p3">激薄 钻石银-白金</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="brand_logo">
+                            <div class="logo_box">
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floor innerfloor">
+                <div class="wrap">
+                    <div class="contain">
+                        <div class="heading">
+                            <div class="fl">
+                                <h3>
+                                    <a href="#">
+                                        热销
+                                        <span class="hot"></span>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="fr">
+                                <a href="#">高性价比商务表</a><span>/</span>
+                                <a href="#">天梭，浪琴</a><span>/</span>
+                                <a href="#">运动表</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="m">
+                            <div class="cf_1">
+                                <div class="cf_1img">
+                                    <ul>
+                                        <li>
+                                            <img src="../img/149761174016494.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/150509603274877.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/150538608122525.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/149761174062834.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cf_1board">
+                                    <div class="cf_1page">
+                                        <a href="#" class="cf_1page_link active">0</a>
+                                        <a href="#" class="cf_1page_link">1</a>
+                                        <a href="#" class="cf_1page_link">2</a>
+                                        <a href="#" class="cf_1page_link">3</a>
+                                    </div>
+                                </div>
+                                <div class="cf_1rl">
+                                    <a rel="#" class="cf_1prev"></a>
+                                    <a rel="#" class="cf_1next"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r list">
+                            <div class="fl">
+                                <a href="#">
+                                    <p class="p1">
+                                        <img src="../img/149510441048664.jpg"/>
+                                    </p>
+                                    <p class="p2">法国赫柏林</p>
+                                    <p class="p3">69折热销绅士男款</p>
+                                </a>
+                            </div>
+                            <div class="fr">
+                                <a href="#">
+                                    <img src="../img/150650221536957.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">天梭TISSOT</p>
+                                        <p class="p3">赠送表带 7.4折</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650221624867.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">迪沃斯DAVOSA</p>
+                                        <p class="p3">6折 品牌爆款</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650257652999.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">浪琴longines</p>
+                                        <p class="p3">经典名匠 8折</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650221536957.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">爱宝时EPOS</p>
+                                        <p class="p3">激薄 钻石银-白金</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="brand_logo">
+                            <div class="logo_box">
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floor innerfloor">
+                <div class="wrap">
+                    <div class="contain">
+                        <div class="heading">
+                            <div class="fl">
+                                <h3>
+                                    <a href="#">
+                                        热销
+                                        <span class="hot"></span>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="fr">
+                                <a href="#">高性价比商务表</a><span>/</span>
+                                <a href="#">天梭，浪琴</a><span>/</span>
+                                <a href="#">运动表</a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="m">
+                            <div class="cf_1">
+                                <div class="cf_1img">
+                                    <ul>
+                                        <li>
+                                            <img src="../img/149761174016494.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/150509603274877.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/150538608122525.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <img src="../img/149761174062834.jpg"/>
+                                            <div class="title">
+                                                <p class="p1">爱宝时激薄至简商务腕表</p>
+                                                <p class="p2">满3000立减100元</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cf_1board">
+                                    <div class="cf_1page">
+                                        <a href="#" class="cf_1page_link active">0</a>
+                                        <a href="#" class="cf_1page_link">1</a>
+                                        <a href="#" class="cf_1page_link">2</a>
+                                        <a href="#" class="cf_1page_link">3</a>
+                                    </div>
+                                </div>
+                                <div class="cf_1rl">
+                                    <a rel="#" class="cf_1prev"></a>
+                                    <a rel="#" class="cf_1next"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="r list">
+                            <div class="fl">
+                                <a href="#">
+                                    <p class="p1">
+                                        <img src="../img/149510441048664.jpg"/>
+                                    </p>
+                                    <p class="p2">法国赫柏林</p>
+                                    <p class="p3">69折热销绅士男款</p>
+                                </a>
+                            </div>
+                            <div class="fr">
+                                <a href="#">
+                                    <img src="../img/150650221536957.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">天梭TISSOT</p>
+                                        <p class="p3">赠送表带 7.4折</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650221624867.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">迪沃斯DAVOSA</p>
+                                        <p class="p3">6折 品牌爆款</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650257652999.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">浪琴longines</p>
+                                        <p class="p3">经典名匠 8折</p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650221536957.jpg" alt=""/>
+                                    <div class="p_txt">
+                                        <p class="p2">爱宝时EPOS</p>
+                                        <p class="p3">激薄 钻石银-白金</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="brand_logo">
+                            <div class="logo_box">
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/147220075791189.png" alt=""/>
+                                    <i style="display: none;">天梭</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="wrap">
+                    <div class="heading">
+                        <div class="fl">
+                            <h3>
+                                <a href="#">
+                                    品牌馆
+                                    <span class="brand"></span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="fr">
+                            <a href="#">高性价比商务表</a><span>/</span>
+                            <a href="#">天梭，浪琴</a><span>/</span>
+                            <a href="#">运动表</a>
+                        </div>
+                    </div>
+                    <div class="brand_msg">
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150060704327882.jpg" alt=""/>
+                            </p>
+                            <p class="p2">
+                                <img src="../img/147220021267169.png" alt=""/>
+                            </p>
+                            <p class="p3">瑞士著名钟表制造商</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150060704327882.jpg" alt=""/>
+                            </p>
+                            <p class="p2">
+                                <img src="../img/147220021267169.png" alt=""/>
+                            </p>
+                            <p class="p3">瑞士著名钟表制造商</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150060704327882.jpg" alt=""/>
+                            </p>
+                            <p class="p2">
+                                <img src="../img/147220021267169.png" alt=""/>
+                            </p>
+                            <p class="p3">瑞士著名钟表制造商</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150060704327882.jpg" alt=""/>
+                            </p>
+                            <p class="p2">
+                                <img src="../img/147220021267169.png" alt=""/>
+                            </p>
+                            <p class="p3">瑞士著名钟表制造商</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150060704327882.jpg" alt=""/>
+                            </p>
+                            <p class="p2">
+                                <img src="../img/147220021267169.png" alt=""/>
+                            </p>
+                            <p class="p3">瑞士著名钟表制造商</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150060704327882.jpg" alt=""/>
+                            </p>
+                            <p class="p2">
+                                <img src="../img/147220021267169.png" alt=""/>
+                            </p>
+                            <p class="p3">瑞士著名钟表制造商</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150060704327882.jpg" alt=""/>
+                            </p>
+                            <p class="p2">
+                                <img src="../img/147220021267169.png" alt=""/>
+                            </p>
+                            <p class="p3">瑞士著名钟表制造商</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150060704327882.jpg" alt=""/>
+                            </p>
+                            <p class="p2">
+                                <img src="../img/147220021267169.png" alt=""/>
+                            </p>
+                            <p class="p3">瑞士著名钟表制造商</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="wrap">
+                    <div class="heading">
+                        <div class="fl">
+                            <h3>
+                                <a href="#">
+                                    猜你喜欢
+                                    <span class="like"></span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="fr">
+                            <a href="#">
+                                <i class="i__refresh"></i>
+                                换一批
+                            </a>
+                        </div>
+                    </div>
+                    <div class="guess_like">
+                        <div class="fl">
+                            <a href="#">
+                                <img src="../img/147220021281731.png" alt=""/>
+                            </a>
+                            <a href="#">
+                                <img src="../img/150753596780488.png" alt=""/>
+                            </a>
+                            <div class="txt">
+                                <a href="#" target="">爆款</a>
+                                <a href="#" target="">正装表</a>
+                                <a href="#" target="">劳力士</a>
+                                <a href="#" target="">女星同款</a>
+                                <a href="#" target="">智能表</a>
+                                <a href="#" target="">线下体验店</a>
+                            </div>
+                        </div>
+                        <div class="fr">
+                            <div class="rel">
+                                <a href="#">
+                                    <img src="../img/150650221624867.jpg" alt=""/>
+                                    <div class="txt">
+                                        <p class="p1">
+                                            浪琴-蓝钢指针
+                                        </p>
+                                        <p class="p2">
+                                            <span class="rmb">￥12000</span>
+                                            <span class="dcount">【8折】</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650221624867.jpg" alt=""/>
+                                    <div class="txt">
+                                        <p class="p1">
+                                            浪琴-蓝钢指针
+                                        </p>
+                                        <p class="p2">
+                                            <span class="rmb">￥12000</span>
+                                            <span class="dcount">【8折】</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650221624867.jpg" alt=""/>
+                                    <div class="txt">
+                                        <p class="p1">
+                                            浪琴-蓝钢指针
+                                        </p>
+                                        <p class="p2">
+                                            <span class="rmb">￥12000</span>
+                                            <span class="dcount">【8折】</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <img src="../img/150650221624867.jpg" alt=""/>
+                                    <div class="txt">
+                                        <p class="p1">
+                                            浪琴-蓝钢指针
+                                        </p>
+                                        <p class="p2">
+                                            <span class="rmb">￥12000</span>
+                                            <span class="dcount">【8折】</span>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="wrap">
+                    <div class="heading">
+                        <div class="fl">
+                            <h3>
+                                <a href="#">
+                                    晒单作用
+                                    <span class="share"></span>
+                                </a>
+                            </h3>
+                        </div>
+                        <div class="fr">
+                            <a href="#">
+                                换一批
+                                <i class="morebtn"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand_msg">
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150426348140210.jpg" alt=""/>
+                            </p>
+                            <p class="ptxt">喜欢这块表很久了，感觉还不错</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150426348140210.jpg" alt=""/>
+                            </p>
+                            <p class="ptxt">喜欢这块表很久了，感觉还不错</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150426348140210.jpg" alt=""/>
+                            </p>
+                            <p class="ptxt">喜欢这块表很久了，感觉还不错</p>
+                        </a>
+                        <a href="#">
+                            <p class="p1">
+                                <img src="../img/150426348140210.jpg" alt=""/>
+                            </p>
+                            <p class="ptxt">喜欢这块表很久了，感觉还不错</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="floor">
+                <div class="wrap">
+                    <div class="fl cont_shop">
+                        <div class="heading">
+                            <div class="fl">
+                                <h3>
+                                    <a href="#">
+                                        线下体验中心
+                                        <span class="shop"></span>
+                                    </a>
+                                </h3>
+                            </div>
+                        </div>
+                        <a href="#"><img src="../img/148842361087734.png" alt=""/></a>
+                        <div class="gird">
+                            <a href="#">广州</a>
+                            <a href="#">茂名</a>
+                            <a href="#">重庆</a>
+                            <a href="#">平顶山</a>
+                            <a href="#">荆州</a>
+                            <a href="#">福州</a>
+                        </div>
+                    </div>
+                    <div class="fr">
+                        <div class="heading">
+                            <div class="fl">
+                                <h3>
+                                    <a href="#">
+                                        腕表资讯
+                                        <span class="news"></span>
+                                    </a>
+                                </h3>
+                            </div>
+                            <div class="fr">
+                                <a href="#">
+                                    更多资讯
+                                    <i class="morebtn"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="news_list">
+                            <ul>
+                                <li>
+                                    <h6>
+                                        <a href="#">[手表评论]</a>
+                                    </h6>
+                                    <a href="#">
+                                        •&nbsp;感觉真的不错，这个手表品牌之前虽然听的不多，但了解后发现这是很有潜力牌子，希望越做越好！谢谢客服唐唐推荐，100个好评
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;买的银色款，也很漂亮，给万表一个赞
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;表很正，没问题，追加一块美滋滋
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;万表网真的是太好了，手表百分百正品，带了一个月才来评价的，手表走时相当准，每天±3秒，一个月调一次表正好，还送了皮表带，证书和保修卡什么的都有，买表我绝对推荐万表网，真实感受。
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;手表戴了一个星期了，感觉还算良好，走时比较精准，看起来也比较大方。
+                                    </a>
+                                </li>
+                                <li>
+                                    <h6>
+                                        <a href="#">[手表专题]</a>
+                                    </h6>
+                                    <a href="#">
+                                        •&nbsp;苹果手机手表玫瑰金图片
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;什么表低调
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;阿玛尼手表女士
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;天梭手表TKL
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;防磁男表
+                                    </a>
+                                </li>
+                                <li>
+                                    <h6>
+                                        <a href="#">[手表学院]</a>
+                                    </h6>
+                                    <a href="#">
+                                        •&nbsp;德国莫勒潜水表怎么样，莫勒机芯是什么档次
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;机械表受磁什么症状_表现，手表进水、有雾受磁怎么办？
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;手表换电池注意什么，石英表电池多久换一次
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;钟表维修店价格怎么样？手表维修站点
+                                    </a>
+                                    <a href="#">
+                                        •&nbsp;汉米尔顿手表怎么换表镜方法分享
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="foot">
+        <div class="foot_1">
+            <div class="wrap">
+                <a href="#">
+                    <span class="zp1"></span>
+                    正品保障
+                </a>
+                <a href="#">
+                    <span class="zp2"></span>
+                    正品保障
+                </a>
+                <a href="#">
+                    <span class="zp3"></span>
+                    正品保障
+                </a>
+                <a href="#">
+                    <span class="zp4"></span>
+                    正品保障
+                </a>
+                <a href="#">
+                    <span class="zp5"></span>
+                    正品保障
+                </a>
+            </div>
+        </div>
+        <div class="foot_2">
+            <div class="wrap">
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+</body>
 </html>

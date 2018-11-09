@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    {% block extcss %}
+
+    {% endblock %}
+    <script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+    {% block extjs %}
+
+    {% endblock %}
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+</head>
+<body>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
