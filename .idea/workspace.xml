@@ -47,7 +47,8 @@
     <session id="1910203178">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.119" value="1" />
           <entry key="project.open.time.129" value="1" />
@@ -61,7 +62,7 @@
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.94" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -110,8 +111,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="540">
+              <caret line="40" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
                 <marker date="1541727535110" expanded="true" signature="175:180" ph="..." />
@@ -169,7 +170,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="31" />
     <option name="width" value="1225" />
     <option name="height" value="766" />
@@ -179,7 +180,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,6 +217,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -280,9 +281,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1373" height="760" extended-state="7" />
+    <frame x="64" y="-11" width="1373" height="760" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17757712" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17983446" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -362,17 +363,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/wanbiao/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        <state relative-caret-position="1605">
+          <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/wanbiao/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="540">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
             <marker date="1541727535110" expanded="true" signature="175:180" ph="..." />
@@ -388,17 +396,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/wanbiao/login.html">
+    <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="23" selection-start-line="107" selection-start-column="23" selection-end-line="107" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/wanbiao/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="45">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
         </state>
       </provider>
     </entry>
