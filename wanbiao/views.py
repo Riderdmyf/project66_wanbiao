@@ -5,10 +5,16 @@ from django.http import HttpResponse
 
 # Create your views here.
 
+from wanbiao.models import Wheel
+
 #index
 def index(request):
     # return HttpResponse('wanbiao')
-    return render(request, 'wanbiao/index.html')
+    wheels = Wheel.objects.all()
+    data = {
+        'wheels':wheels,
+    }
+    return render(request, 'wanbiao/index.html', context=data)
 
 #cart
 def cart(request):
