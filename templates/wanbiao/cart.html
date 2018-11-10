@@ -19,18 +19,18 @@
         <div class="wrap">
             <ul>
                 <li style=" background: none;">
-                    <a href="">登录</a>
-                    <a href="">注册</a>
+                    <a href="{% url 'wanbiao:login' %}">登录</a>
+                    <a href="{% url 'wanbiao:register' %}">注册</a>
                 </li>
                 <li>
                     <a>全国客服电话：<span>400-883-2688</span></a>
                 </li>
                 <li>
-                    <a href="">我的订单</a>
+                    <a href="{% url 'wanbiao:cart' %}">我的订单</a>
                     <a href="">会员中心</a>
                 </li>
                 <li>
-                    <a href="">去购物车结算</a>
+                    <a href="{% url 'wanbiao:cart' %}">去购物车结算</a>
                 </li>
             </ul>
         </div>
