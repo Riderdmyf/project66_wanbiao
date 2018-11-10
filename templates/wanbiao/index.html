@@ -1,32 +1,20 @@
 {% extends 'wanbiao/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title></title>
-    {#		<link rel="stylesheet" href="{% static 'css/reset.css' %}" />#}
+{% block title %}
+    wanbiao | shouye
+{% endblock %}
 
-    {% block extcss %}
-        <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
-        <link rel="stylesheet" href="{% static 'css/bg-index.css' %}"/>
-    {% endblock %}
-    {#		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>#}
+{% block extcss %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bg-index.css' %}"/>
+{% endblock %}
 
-    {% block extjs %}
-        <script src="{% static 'js/pop_zone.js' %}"></script>
-        <script src="{% static 'js/cf.js' %}"></script>
-    {% endblock %}
+{% block extjs %}
+    <script src="{% static 'js/pop_zone.js' %}"></script>
+    <script src="{% static 'js/cf.js' %}"></script>
+{% endblock %}
 
-    <title>
-        {% block title %}
-            主页
-        {% endblock %}
-    </title>
-
-</head>
-<body>
 {% block content %}
     <div class="index_news rel" id="pop_zone">
         <ul class="wrap">
@@ -1552,5 +1540,3 @@
         </div>
     </div>
 {% endblock %}
-</body>
-</html>
