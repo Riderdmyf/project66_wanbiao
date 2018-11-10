@@ -1114,7 +1114,7 @@
     <table id="284" parent="2" name="django_content_type"/>
     <table id="285" parent="2" name="django_migrations"/>
     <table id="286" parent="2" name="django_session"/>
-    <table id="287" parent="2" name="wanbiao_watch"/>
+    <table id="287" parent="2" name="lunbo"/>
     <column id="288" parent="277" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
@@ -1599,7 +1599,13 @@ model</ColNames>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="373" parent="287" name="PRIMARY">
+    <column id="373" parent="287" name="key">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="374" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

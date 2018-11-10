@@ -2,7 +2,6 @@ import random
 
 from django.shortcuts import render
 from django.http import HttpResponse
-from wanbiao.models import Watch
 
 # Create your views here.
 
@@ -38,13 +37,3 @@ def register(request):
 #epos(buy page)
 def epos(request):
     return render(request, 'wanbiao/epos.html')
-
-#addwatch
-def addwatch(request):
-
-    watch = Watch()
-    watch.img = 'img-' + str(random.randrange(500))
-
-    watch.save()
-
-    return HttpResponse('added watch successfully' + watch.img)

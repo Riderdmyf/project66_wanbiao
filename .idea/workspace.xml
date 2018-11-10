@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed6db743-ecd8-462f-84b1-7e07803087f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/templates/wanbiao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wanbiao/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/99be8e1e-970a-43a5-b95b-7efa590f9371.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/99be8e1e-970a-43a5-b95b-7efa590f9371.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wanbiao/migrations/0001_initial.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wanbiao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wanbiao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wanbiao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,23 +78,24 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="9" />
-          <entry key="py" value="42" />
+          <entry key="lunbo" value="2" />
+          <entry key="py" value="49" />
           <entry key="sql" value="1" />
           <entry key="wanbiao_watch" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="3" />
+          <entry key="Database Element" value="5" />
           <entry key="HTML" value="9" />
-          <entry key="Python" value="42" />
+          <entry key="Python" value="49" />
           <entry key="Scratch" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="620" />
-          <entry key="py" value="1688" />
+          <entry key="py" value="1741" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
@@ -98,7 +103,7 @@
         <counts>
           <entry key="HTML" value="620" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="1688" />
+          <entry key="Python" value="1741" />
         </counts>
       </usages-collector>
     </session>
@@ -118,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/templates/wanbiao/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-15">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
@@ -126,21 +131,40 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wanbiao/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state relative-caret-position="180">
+              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
               <folding>
-                <marker date="1541818679090" expanded="true" signature="153:158" ph="..." />
-                <marker date="1541818679090" expanded="true" signature="260:265" ph="..." />
+                <marker date="1541819407491" expanded="true" signature="82:87" ph="..." />
+                <marker date="1541819407491" expanded="true" signature="229:234" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project66_wanbiao/settings.py">
+        <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-416">
-              <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
+            <state relative-caret-position="150">
+              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="525">
+              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+                <marker date="1541820153769" expanded="true" signature="142:147" ph="..." />
+                <marker date="1541820153769" expanded="true" signature="254:259" ph="..." />
+                <marker date="1541820153769" expanded="true" signature="332:337" ph="..." />
+                <marker date="1541820153769" expanded="true" signature="404:409" ph="..." />
+                <marker date="1541820153769" expanded="true" signature="474:479" ph="..." />
+                <marker date="1541820153769" expanded="true" signature="537:542" ph="..." />
+                <marker date="1541820153769" expanded="true" signature="620:625" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -162,15 +186,15 @@
       <list>
         <option value="$PROJECT_DIR$/project66_wanbiao/settings.py" />
         <option value="$PROJECT_DIR$/wanbiao/__init__.py" />
-        <option value="$PROJECT_DIR$/wanbiao/urls.py" />
         <option value="$PROJECT_DIR$/project66_wanbiao/urls.py" />
         <option value="$PROJECT_DIR$/templates/wanbiao/login.html" />
         <option value="$PROJECT_DIR$/templates/wanbiao/cart.html" />
         <option value="$PROJECT_DIR$/templates/wanbiao/base.html" />
-        <option value="$PROJECT_DIR$/wanbiao/views.py" />
         <option value="$PROJECT_DIR$/templates/wanbiao/index_1.html" />
         <option value="$PROJECT_DIR$/templates/wanbiao/index.html" />
         <option value="$PROJECT_DIR$/wanbiao/models.py" />
+        <option value="$PROJECT_DIR$/wanbiao/views.py" />
+        <option value="$PROJECT_DIR$/wanbiao/urls.py" />
       </list>
     </option>
   </component>
@@ -180,7 +204,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="31" />
     <option name="width" value="1225" />
     <option name="height" value="766" />
@@ -206,23 +230,13 @@
             <path>
               <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
               <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
-              <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="wanbiao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
               <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
               <item name="wanbiao" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -291,9 +305,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1373" height="760" extended-state="7" />
+    <frame x="64" y="-11" width="1373" height="760" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19112115" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19112115" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -307,14 +321,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008183" side_tool="true" weight="0.38448846" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49918166" visible="true" weight="0.38473767" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49918166" visible="true" weight="0.38473767" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3290938" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32881865" />
-      <window_info anchor="right" id="Database" order="4" weight="0.23927765" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.23927765" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,9 +342,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/wanbiao/migrations/urls.py" />
-    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0001_initial.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/99be8e1e-970a-43a5-b95b-7efa590f9371/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -377,56 +388,88 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/wanbiao/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-15">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1541816459008" expanded="true" signature="175:180" ph="..." />
-            <marker date="1541816459008" expanded="true" signature="287:292" ph="..." />
-            <marker date="1541816459008" expanded="true" signature="365:370" ph="..." />
-            <marker date="1541816459008" expanded="true" signature="437:442" ph="..." />
-            <marker date="1541816459008" expanded="true" signature="507:512" ph="..." />
-            <marker date="1541816459008" expanded="true" signature="570:575" ph="..." />
-            <marker date="1541816459008" expanded="true" signature="653:658" ph="..." />
-            <marker date="1541816459008" expanded="true" signature="741:791" ph="..." />
-            <marker date="1541816459008" expanded="true" signature="915:920" ph="..." />
-          </folding>
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project66_wanbiao/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0003_delete_watch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0002_wheel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99be8e1e-970a-43a5-b95b-7efa590f9371/schema/Wanbiao/table/lunbo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1541820153769" expanded="true" signature="142:147" ph="..." />
+            <marker date="1541820153769" expanded="true" signature="254:259" ph="..." />
+            <marker date="1541820153769" expanded="true" signature="332:337" ph="..." />
+            <marker date="1541820153769" expanded="true" signature="404:409" ph="..." />
+            <marker date="1541820153769" expanded="true" signature="474:479" ph="..." />
+            <marker date="1541820153769" expanded="true" signature="537:542" ph="..." />
+            <marker date="1541820153769" expanded="true" signature="620:625" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/project66_wanbiao/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-416">
+        <state relative-caret-position="1305">
           <caret line="87" column="1" selection-start-line="87" selection-start-column="1" selection-end-line="87" selection-end-column="1" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0002_auto_20181110_1132.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-40" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wanbiao/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state relative-caret-position="180">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
           <folding>
-            <marker date="1541818679090" expanded="true" signature="153:158" ph="..." />
-            <marker date="1541818679090" expanded="true" signature="260:265" ph="..." />
+            <marker date="1541819407491" expanded="true" signature="82:87" ph="..." />
+            <marker date="1541819407491" expanded="true" signature="229:234" ph="..." />
           </folding>
         </state>
       </provider>
