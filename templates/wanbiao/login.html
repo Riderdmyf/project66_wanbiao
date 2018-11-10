@@ -1,180 +1,184 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" href="../css/login_reset.css" />
-		<link rel="stylesheet" href="../css/login.css" />
-		<script src="../js/cookie.js"></script>
-		<script src="../js/jquery-1.12.3.js"></script>
-		<script src="../js/jquery.cookie.js"></script>
-		<script src="../js/login.js"></script>
-		<script type="text/javascript">
-			$(function(){
-				 	
-				 	var phone = getCookie("phone");
-					var pwd = getCookie("pwd");
-					var autologin = getCookie("autologin");
-					
-				
-					$("#name").val(phone)
-					$("#password").val(pwd)
+{% extends 'wanbiao/base.html' %}
+{% load static %}
 
-					if (autologin) {
-						var xhr = new XMLHttpRequest();
-						
-						xhr.open("post", "http://localhost/wbiao/php/login.php", true);
-						xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-						var str = "phone="+ $("#name").val()   + "&pwd="+$("#password").val();
-						xhr.send(str);
-						
+{% block title %}
+    万表 | 注册
+{% endblock %}
 
-	
-						xhr.onreadystatechange = function () {
-							if (xhr.readyState==4 && xhr.status==200) {
-								var obj = JSON.parse(xhr.responseText)
-								
-									
-								if(obj.status==1){
-									$(".zidong").show()
-									$(".bbb").show()
-									$(".zidong a").eq(0).click(function(e){
-										e.preventDefault();
-										$(".zidong").slideUp();
-										$(".bbb").slideUp();
-									})
-									$(".zidong a").eq(1).click(function(e){
-										e.preventDefault();
-										window.location.href="http://localhost/wbiao/html/index.html";
-									})
-								}
+{% block extcss %}
+    <link rel="stylesheet" href="{% static 'css/login_reset.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}"/>
+{% endblock %}
 
-							} 
-						}  
-					}
-					
-					$("#dl").click(function(){
-						
-						if ($("#autologin").is(':checked')){
-							
-							
-								var d = new Date();
-								d.setDate(d.getDate()+10);
-								setCookie("phone", $("#name").val(), d);
-								setCookie("pwd", $("#password").val(), d);
-								setCookie("autologin", $("#autologin").is(':checked'),d);
-					
-					
-						}
-						if ($("#rememble").is(':checked')) {
-							var d = new Date();
-							d.setDate(d.getDate()+10);
-							setCookie("phone", $("#name").val(), d);
-							setCookie("pwd", $("#password").val(), d);
-						}
-				 
-					})
-				 	
-					$("#dl").click(function(){
-						
-						var xhr = new XMLHttpRequest();
-						
-						xhr.open("post", "http://localhost/wbiao/php/login.php", true);
-						xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-						var str = "phone="+ $("#name").val()   + "&pwd="+$("#password").val();
-						xhr.send(str);
-						
+{% block extjs %}
+    <script src="{% static 'js/cookie.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script type="text/javascript">
+        $(function () {
 
-	
-						xhr.onreadystatechange = function () {
-							if (xhr.readyState==4 && xhr.status==200) {
-								var obj = JSON.parse(xhr.responseText)
-								
-									alert(obj.msg)
-								if(obj.status==1){
+            var phone = getCookie("phone");
+            var pwd = getCookie("pwd");
+            var autologin = getCookie("autologin");
 
-									window.location.href="http://localhost/wbiao/html/index.html";
-								}
 
-							} 
-						}  
-					})
-					
- 				
-			})
-		</script>
-	</head>
-	<body>
-		<div class="header">
-			<div class="logo">
-				<a href=""></a>
-				<span class="logotxt">
-					<img src="../img-1/logoname.png" alt="" />
+            $("#name").val(phone)
+            $("#password").val(pwd)
+
+            if (autologin) {
+                var xhr = new XMLHttpRequest();
+
+                xhr.open("post", "http://localhost/wbiao/php/login.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                var str = "phone=" + $("#name").val() + "&pwd=" + $("#password").val();
+                xhr.send(str);
+
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var obj = JSON.parse(xhr.responseText)
+
+
+                        if (obj.status == 1) {
+                            $(".zidong").show()
+                            $(".bbb").show()
+                            $(".zidong a").eq(0).click(function (e) {
+                                e.preventDefault();
+                                $(".zidong").slideUp();
+                                $(".bbb").slideUp();
+                            })
+                            $(".zidong a").eq(1).click(function (e) {
+                                e.preventDefault();
+                                window.location.href = "http://localhost/wbiao/html/index.html";
+                            })
+                        }
+
+                    }
+                }
+            }
+
+            $("#dl").click(function () {
+
+                if ($("#autologin").is(':checked')) {
+
+
+                    var d = new Date();
+                    d.setDate(d.getDate() + 10);
+                    setCookie("phone", $("#name").val(), d);
+                    setCookie("pwd", $("#password").val(), d);
+                    setCookie("autologin", $("#autologin").is(':checked'), d);
+
+
+                }
+                if ($("#rememble").is(':checked')) {
+                    var d = new Date();
+                    d.setDate(d.getDate() + 10);
+                    setCookie("phone", $("#name").val(), d);
+                    setCookie("pwd", $("#password").val(), d);
+                }
+
+            })
+
+            $("#dl").click(function () {
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open("post", "http://localhost/wbiao/php/login.php", true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                var str = "phone=" + $("#name").val() + "&pwd=" + $("#password").val();
+                xhr.send(str);
+
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        var obj = JSON.parse(xhr.responseText)
+
+                        alert(obj.msg)
+                        if (obj.status == 1) {
+
+                            window.location.href = "http://localhost/wbiao/html/index.html";
+                        }
+
+                    }
+                }
+            })
+
+
+        })
+    </script>
+{% endblock %}
+
+{% block content %}
+    <div class="header">
+        <div class="logo">
+            <a href=""></a>
+            <span class="logotxt">
+					<img src="{% static 'img-1/logoname.png' %}" alt=""/>
 				</span>
-			</div>
-		</div>
-		
-		<div class="main">
-			<div class="mainbg">
-				<div class="content">
-					<a href="" class="click"></a>
-					<div class="loginborder">
-						<div class="login">
-							<div class="t">
-								<div class="fl">
-									<div class="logo">万表会员</div>
-								</div>
-								<div class="fr">
-									<a href="">
-										<i></i>
-										手机动态码登录
-									</a>
-								</div>
-							</div>
-							<div class="c">
-								<form action="" method="post">
-									<ul>
-										<li class="mt15">
-											<i class="uname"></i>
-											<input id="name" type="text" placeholder="手机号码/会员名/邮箱"/>
-										</li>
-										<li class="mt15">
-											<i class="pwd"></i>
-											<input id="password" type="password" placeholder="密码"/>
-										</li>
-										<li class="mb15">
-											<input type="checkbox" id="autologin"/>
-											<label for="autologin">自动登录</label>
-											<input type="checkbox" id="rememble" />
-											<label for="rememble">记住密码</label>
-										</li>
-										<li>
-											<input id="dl" class="sbm" type="button" />
-										</li>
-										<li class="mb15 mb17">
-											<a href="register.html">
-												注册万表会员
-											</a>
-											<span style="float: right;">
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="mainbg">
+            <div class="content">
+                <a href="" class="click"></a>
+                <div class="loginborder">
+                    <div class="login">
+                        <div class="t">
+                            <div class="fl">
+                                <div class="logo">万表会员</div>
+                            </div>
+                            <div class="fr">
+                                <a href="">
+                                    <i></i>
+                                    手机动态码登录
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c">
+                            <form action="" method="post">
+                                <ul>
+                                    <li class="mt15">
+                                        <i class="uname"></i>
+                                        <input id="name" type="text" placeholder="手机号码/会员名/邮箱"/>
+                                    </li>
+                                    <li class="mt15">
+                                        <i class="pwd"></i>
+                                        <input id="password" type="password" placeholder="密码"/>
+                                    </li>
+                                    <li class="mb15">
+                                        <input type="checkbox" id="autologin"/>
+                                        <label for="autologin">自动登录</label>
+                                        <input type="checkbox" id="rememble"/>
+                                        <label for="rememble">记住密码</label>
+                                    </li>
+                                    <li>
+                                        <input id="dl" class="sbm" type="button"/>
+                                    </li>
+                                    <li class="mb15 mb17">
+                                        <a href="register.html">
+                                            注册万表会员
+                                        </a>
+                                        <span style="float: right;">
 												<a href="">
 													忘记密码？
 												</a>
 											</span>
-										</li>
-									</ul>
-								</form>
-							</div>
-							<div class="b"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="bbb" style="display: none; width: 100%;height: 100%;background: #333333;position: absolute;z-index: 99999;top: 0;opacity: .6;"></div>
-		<div class="zidong" style="border-radius: 30px; width: 300px; display: none; z-index:99999;height: 200px;background:#FAFAFA; border: #245269 solid 2px; position:absolute;left: 50%; top:50%;margin:-100px 0 0 -150px; text-align: center; line-height: 100px;font-size: 20px; ">
-			自动登录成功，是否跳转？<br />
-			<a href="">否</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="">是</a>
-		</div>
-	
-	</body>
-</html>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                        <div class="b"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bbb"
+         style="display: none; width: 100%;height: 100%;background: #333333;position: absolute;z-index: 99999;top: 0;opacity: .6;"></div>
+    <div class="zidong"
+         style="border-radius: 30px; width: 300px; display: none; z-index:99999;height: 200px;background:#FAFAFA; border: #245269 solid 2px; position:absolute;left: 50%; top:50%;margin:-100px 0 0 -150px; text-align: center; line-height: 100px;font-size: 20px; ">
+        自动登录成功，是否跳转？<br/>
+        <a href="">否</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="">是</a>
+    </div>
+{% endblock %}
