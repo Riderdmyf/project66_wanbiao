@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed6db743-ecd8-462f-84b1-7e07803087f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/99be8e1e-970a-43a5-b95b-7efa590f9371.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/99be8e1e-970a-43a5-b95b-7efa590f9371.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wanbiao/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wanbiao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wanbiao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wanbiao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/wanbiao/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/wanbiao/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +48,7 @@
     <session id="1910203178">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="19" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.112" value="1" />
@@ -60,6 +56,7 @@
           <entry key="project.open.time.129" value="1" />
           <entry key="project.open.time.135" value="1" />
           <entry key="project.open.time.137" value="1" />
+          <entry key="project.open.time.140" value="1" />
           <entry key="project.open.time.153" value="1" />
           <entry key="project.open.time.179" value="1" />
           <entry key="project.open.time.229" value="1" />
@@ -72,70 +69,184 @@
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.94" value="1" />
           <entry key="project.open.time.97" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="9" />
-          <entry key="lunbo" value="2" />
+          <entry key="css" value="1" />
+          <entry key="html" value="11" />
+          <entry key="js" value="3" />
+          <entry key="lunbo" value="5" />
           <entry key="py" value="49" />
-          <entry key="sql" value="1" />
+          <entry key="sql" value="5" />
           <entry key="wanbiao_watch" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="5" />
-          <entry key="HTML" value="9" />
+          <entry key="CSS" value="1" />
+          <entry key="Database Element" value="8" />
+          <entry key="HTML" value="11" />
+          <entry key="JavaScript" value="3" />
           <entry key="Python" value="49" />
-          <entry key="Scratch" value="1" />
+          <entry key="Scratch" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="620" />
-          <entry key="py" value="1741" />
+          <entry key="html" value="740" />
+          <entry key="js" value="4" />
+          <entry key="py" value="1816" />
+          <entry key="sql" value="224" />
           <entry key="txt" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="620" />
+          <entry key="HTML" value="740" />
+          <entry key="JavaScript" value="4" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="1741" />
+          <entry key="Python" value="1816" />
+          <entry key="Scratch" value="224" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/wanbiao/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" selection-start-column="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/wanbiao/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="180">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="e#561#584#0#HTML" expanded="true" />
+                <element signature="e#1344#1452#0#HTML" expanded="true" />
+                <element signature="e#1775#1797#0#HTML" expanded="true" />
+                <element signature="e#4163#4169#0#HTML" expanded="true" />
+                <element signature="e#4169#4175#0#HTML" expanded="true" />
+                <element signature="e#4589#4593#0#HTML" expanded="true" />
+                <element signature="e#6902#6906#0#HTML" expanded="true" />
+                <element signature="e#8180#8184#0#HTML" expanded="true" />
+                <element signature="e#8893#8899#0#HTML" expanded="true" />
+                <element signature="e#8899#8905#0#HTML" expanded="true" />
+                <element signature="e#9317#9321#0#HTML" expanded="true" />
+                <element signature="e#11630#11634#0#HTML" expanded="true" />
+                <element signature="e#12493#12497#0#HTML" expanded="true" />
+                <element signature="e#13206#13212#0#HTML" expanded="true" />
+                <element signature="e#13212#13218#0#HTML" expanded="true" />
+                <element signature="e#13629#13633#0#HTML" expanded="true" />
+                <element signature="e#15942#15946#0#HTML" expanded="true" />
+                <element signature="e#17220#17224#0#HTML" expanded="true" />
+                <element signature="e#17933#17939#0#HTML" expanded="true" />
+                <element signature="e#17939#17945#0#HTML" expanded="true" />
+                <element signature="e#18406#18410#0#HTML" expanded="true" />
+                <element signature="e#20719#20723#0#HTML" expanded="true" />
+                <element signature="e#21858#21862#0#HTML" expanded="true" />
+                <element signature="e#22571#22577#0#HTML" expanded="true" />
+                <element signature="e#22577#22583#0#HTML" expanded="true" />
+                <element signature="e#23044#23048#0#HTML" expanded="true" />
+                <element signature="e#25357#25361#0#HTML" expanded="true" />
+                <element signature="e#26356#26360#0#HTML" expanded="true" />
+                <element signature="e#27873#27912#0#HTML" expanded="true" />
+                <element signature="e#27959#27986#0#HTML" expanded="true" />
+                <element signature="e#28031#28035#0#HTML" expanded="true" />
+                <element signature="e#28440#28479#0#HTML" expanded="true" />
+                <element signature="e#28526#28553#0#HTML" expanded="true" />
+                <element signature="e#28598#28602#0#HTML" expanded="true" />
+                <element signature="e#29007#29060#0#HTML" expanded="true" />
+                <element signature="e#29107#29134#0#HTML" expanded="true" />
+                <element signature="e#29179#29183#0#HTML" expanded="true" />
+                <element signature="e#29263#29284#0#HTML" expanded="true" />
+                <element signature="e#30063#30102#0#HTML" expanded="true" />
+                <element signature="e#30149#30176#0#HTML" expanded="true" />
+                <element signature="e#30221#30225#0#HTML" expanded="true" />
+                <element signature="e#30630#30669#0#HTML" expanded="true" />
+                <element signature="e#30716#30743#0#HTML" expanded="true" />
+                <element signature="e#30788#30792#0#HTML" expanded="true" />
+                <element signature="e#31197#31250#0#HTML" expanded="true" />
+                <element signature="e#31297#31324#0#HTML" expanded="true" />
+                <element signature="e#31369#31373#0#HTML" expanded="true" />
+                <element signature="e#31453#31474#0#HTML" expanded="true" />
+                <element signature="e#32253#32292#0#HTML" expanded="true" />
+                <element signature="e#32339#32366#0#HTML" expanded="true" />
+                <element signature="e#32411#32415#0#HTML" expanded="true" />
+                <element signature="e#32820#32859#0#HTML" expanded="true" />
+                <element signature="e#32906#32933#0#HTML" expanded="true" />
+                <element signature="e#32978#32982#0#HTML" expanded="true" />
+                <element signature="e#33387#33440#0#HTML" expanded="true" />
+                <element signature="e#33487#33514#0#HTML" expanded="true" />
+                <element signature="e#33559#33563#0#HTML" expanded="true" />
+                <element signature="e#33643#33664#0#HTML" expanded="true" />
+                <element signature="e#34264#34291#0#HTML" expanded="true" />
+                <element signature="e#34335#34357#0#HTML" expanded="true" />
+                <element signature="e#36552#36577#0#HTML" expanded="true" />
+                <element signature="e#37341#37365#0#HTML" expanded="true" />
+                <element signature="e#43893#43915#0#HTML" expanded="true" />
+                <element signature="e#44125#44147#0#HTML" expanded="true" />
+                <element signature="e#44357#44379#0#HTML" expanded="true" />
+                <element signature="e#44589#44611#0#HTML" expanded="true" />
+                <element signature="e#44821#44843#0#HTML" expanded="true" />
+                <element signature="e#45053#45075#0#HTML" expanded="true" />
+                <element signature="e#51178#51200#0#HTML" expanded="true" />
+                <element signature="e#51410#51432#0#HTML" expanded="true" />
+                <element signature="e#51642#51664#0#HTML" expanded="true" />
+                <element signature="e#51874#51896#0#HTML" expanded="true" />
+                <element signature="e#52106#52128#0#HTML" expanded="true" />
+                <element signature="e#52338#52360#0#HTML" expanded="true" />
+                <element signature="e#58463#58485#0#HTML" expanded="true" />
+                <element signature="e#58695#58717#0#HTML" expanded="true" />
+                <element signature="e#58927#58949#0#HTML" expanded="true" />
+                <element signature="e#59159#59181#0#HTML" expanded="true" />
+                <element signature="e#59391#59413#0#HTML" expanded="true" />
+                <element signature="e#59623#59645#0#HTML" expanded="true" />
+                <element signature="e#71879#71885#0#HTML" expanded="true" />
+                <element signature="e#72064#72070#0#HTML" expanded="true" />
+                <element signature="e#72207#72213#0#HTML" expanded="true" />
+                <element signature="e#72348#72354#0#HTML" expanded="true" />
+                <element signature="e#72562#72568#0#HTML" expanded="true" />
+                <element signature="e#72922#72928#0#HTML" expanded="true" />
+                <element signature="e#73059#73065#0#HTML" expanded="true" />
+                <element signature="e#73190#73196#0#HTML" expanded="true" />
+                <element signature="e#73323#73329#0#HTML" expanded="true" />
+                <element signature="e#73456#73462#0#HTML" expanded="true" />
+                <element signature="e#73787#73793#0#HTML" expanded="true" />
+                <element signature="e#73933#73939#0#HTML" expanded="true" />
+                <element signature="e#74085#74091#0#HTML" expanded="true" />
+                <element signature="e#74231#74237#0#HTML" expanded="true" />
+                <element signature="e#74374#74380#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/wanbiao/translate.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/wanbiao/index_cp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wanbiao/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+            <state relative-caret-position="150">
+              <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
               <folding>
-                <marker date="1541819407491" expanded="true" signature="82:87" ph="..." />
-                <marker date="1541819407491" expanded="true" signature="229:234" ph="..." />
+                <marker date="1541822390091" expanded="true" signature="82:87" ph="..." />
+                <marker date="1541822390091" expanded="true" signature="235:240" ph="..." />
               </folding>
             </state>
           </provider>
@@ -153,17 +264,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
+            <state relative-caret-position="330">
+              <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
-                <marker date="1541820153769" expanded="true" signature="142:147" ph="..." />
-                <marker date="1541820153769" expanded="true" signature="254:259" ph="..." />
-                <marker date="1541820153769" expanded="true" signature="332:337" ph="..." />
-                <marker date="1541820153769" expanded="true" signature="404:409" ph="..." />
-                <marker date="1541820153769" expanded="true" signature="474:479" ph="..." />
-                <marker date="1541820153769" expanded="true" signature="537:542" ph="..." />
-                <marker date="1541820153769" expanded="true" signature="620:625" ph="..." />
+                <marker date="1541823101344" expanded="true" signature="176:181" ph="..." />
+                <marker date="1541823101344" expanded="true" signature="379:384" ph="..." />
+                <marker date="1541823101344" expanded="true" signature="457:462" ph="..." />
+                <marker date="1541823101344" expanded="true" signature="529:534" ph="..." />
+                <marker date="1541823101344" expanded="true" signature="599:604" ph="..." />
+                <marker date="1541823101344" expanded="true" signature="662:667" ph="..." />
+                <marker date="1541823101344" expanded="true" signature="745:750" ph="..." />
               </folding>
             </state>
           </provider>
@@ -174,6 +285,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -191,10 +303,14 @@
         <option value="$PROJECT_DIR$/templates/wanbiao/cart.html" />
         <option value="$PROJECT_DIR$/templates/wanbiao/base.html" />
         <option value="$PROJECT_DIR$/templates/wanbiao/index_1.html" />
-        <option value="$PROJECT_DIR$/templates/wanbiao/index.html" />
-        <option value="$PROJECT_DIR$/wanbiao/models.py" />
-        <option value="$PROJECT_DIR$/wanbiao/views.py" />
         <option value="$PROJECT_DIR$/wanbiao/urls.py" />
+        <option value="$PROJECT_DIR$/wanbiao/models.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/99be8e1e-970a-43a5-b95b-7efa590f9371/console_1.sql" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/99be8e1e-970a-43a5-b95b-7efa590f9371/console_2.sql" />
+        <option value="$PROJECT_DIR$/wanbiao/views.py" />
+        <option value="$PROJECT_DIR$/static/js/translate.js" />
+        <option value="$PROJECT_DIR$/templates/wanbiao/index_cp.html" />
+        <option value="$PROJECT_DIR$/templates/wanbiao/index.html" />
       </list>
     </option>
   </component>
@@ -209,12 +325,14 @@
     <option name="width" value="1225" />
     <option name="height" value="766" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,6 +344,28 @@
               <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
               <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
               <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project66_wanbiao" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="wanbiao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="project66_wanbiao" type="b2602c69:ProjectViewProjectNode" />
@@ -242,6 +382,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -253,6 +394,14 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/wanbiao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/wanbiao" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -306,8 +455,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1373" height="760" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19112115" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19413093" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -321,14 +471,14 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008183" side_tool="true" weight="0.38448846" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49918166" visible="true" weight="0.38473767" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49918166" visible="true" weight="0.38473767" />
       <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="bottom" id="Database Console" order="13" weight="0.3290938" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32881865" />
-      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.23927765" />
+      <window_info anchor="right" id="Database" order="4" weight="0.23927765" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,78 +524,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/wanbiao/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="19" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/wanbiao/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/wanbiao/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/project66_wanbiao/wsgi.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/wanbiao/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0003_delete_watch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0002_wheel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://99be8e1e-970a-43a5-b95b-7efa590f9371/schema/Wanbiao/table/lunbo">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-            <marker date="1541820153769" expanded="true" signature="142:147" ph="..." />
-            <marker date="1541820153769" expanded="true" signature="254:259" ph="..." />
-            <marker date="1541820153769" expanded="true" signature="332:337" ph="..." />
-            <marker date="1541820153769" expanded="true" signature="404:409" ph="..." />
-            <marker date="1541820153769" expanded="true" signature="474:479" ph="..." />
-            <marker date="1541820153769" expanded="true" signature="537:542" ph="..." />
-            <marker date="1541820153769" expanded="true" signature="620:625" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0003_delete_watch.py" />
+    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0002_wheel.py" />
     <entry file="file://$PROJECT_DIR$/project66_wanbiao/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
@@ -458,18 +544,190 @@
         <state relative-caret-position="-85" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0002_auto_20181110_1132.py">
+    <entry file="file://$PROJECT_DIR$/wanbiao/migrations/0002_auto_20181110_1132.py" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/99be8e1e-970a-43a5-b95b-7efa590f9371/console_2.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40" />
+        <state>
+          <caret column="85" selection-start-column="85" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/99be8e1e-970a-43a5-b95b-7efa590f9371/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="38" selection-start-column="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/wanbiao/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="17" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wanbiao/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        <state relative-caret-position="150">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
-            <marker date="1541819407491" expanded="true" signature="82:87" ph="..." />
-            <marker date="1541819407491" expanded="true" signature="229:234" ph="..." />
+            <marker date="1541822390091" expanded="true" signature="82:87" ph="..." />
+            <marker date="1541822390091" expanded="true" signature="235:240" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99be8e1e-970a-43a5-b95b-7efa590f9371/schema/Wanbiao/table/lunbo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <marker date="1541823101344" expanded="true" signature="176:181" ph="..." />
+            <marker date="1541823101344" expanded="true" signature="379:384" ph="..." />
+            <marker date="1541823101344" expanded="true" signature="457:462" ph="..." />
+            <marker date="1541823101344" expanded="true" signature="529:534" ph="..." />
+            <marker date="1541823101344" expanded="true" signature="599:604" ph="..." />
+            <marker date="1541823101344" expanded="true" signature="662:667" ph="..." />
+            <marker date="1541823101344" expanded="true" signature="745:750" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/swiper.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/wanbiao/jquery-1.12.3.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/wanbiao/index_cp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="26" lean-forward="true" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/wanbiao/translate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="3" lean-forward="true" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/wanbiao/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="e#561#584#0#HTML" expanded="true" />
+            <element signature="e#1344#1452#0#HTML" expanded="true" />
+            <element signature="e#1775#1797#0#HTML" expanded="true" />
+            <element signature="e#4163#4169#0#HTML" expanded="true" />
+            <element signature="e#4169#4175#0#HTML" expanded="true" />
+            <element signature="e#4589#4593#0#HTML" expanded="true" />
+            <element signature="e#6902#6906#0#HTML" expanded="true" />
+            <element signature="e#8180#8184#0#HTML" expanded="true" />
+            <element signature="e#8893#8899#0#HTML" expanded="true" />
+            <element signature="e#8899#8905#0#HTML" expanded="true" />
+            <element signature="e#9317#9321#0#HTML" expanded="true" />
+            <element signature="e#11630#11634#0#HTML" expanded="true" />
+            <element signature="e#12493#12497#0#HTML" expanded="true" />
+            <element signature="e#13206#13212#0#HTML" expanded="true" />
+            <element signature="e#13212#13218#0#HTML" expanded="true" />
+            <element signature="e#13629#13633#0#HTML" expanded="true" />
+            <element signature="e#15942#15946#0#HTML" expanded="true" />
+            <element signature="e#17220#17224#0#HTML" expanded="true" />
+            <element signature="e#17933#17939#0#HTML" expanded="true" />
+            <element signature="e#17939#17945#0#HTML" expanded="true" />
+            <element signature="e#18406#18410#0#HTML" expanded="true" />
+            <element signature="e#20719#20723#0#HTML" expanded="true" />
+            <element signature="e#21858#21862#0#HTML" expanded="true" />
+            <element signature="e#22571#22577#0#HTML" expanded="true" />
+            <element signature="e#22577#22583#0#HTML" expanded="true" />
+            <element signature="e#23044#23048#0#HTML" expanded="true" />
+            <element signature="e#25357#25361#0#HTML" expanded="true" />
+            <element signature="e#26356#26360#0#HTML" expanded="true" />
+            <element signature="e#27873#27912#0#HTML" expanded="true" />
+            <element signature="e#27959#27986#0#HTML" expanded="true" />
+            <element signature="e#28031#28035#0#HTML" expanded="true" />
+            <element signature="e#28440#28479#0#HTML" expanded="true" />
+            <element signature="e#28526#28553#0#HTML" expanded="true" />
+            <element signature="e#28598#28602#0#HTML" expanded="true" />
+            <element signature="e#29007#29060#0#HTML" expanded="true" />
+            <element signature="e#29107#29134#0#HTML" expanded="true" />
+            <element signature="e#29179#29183#0#HTML" expanded="true" />
+            <element signature="e#29263#29284#0#HTML" expanded="true" />
+            <element signature="e#30063#30102#0#HTML" expanded="true" />
+            <element signature="e#30149#30176#0#HTML" expanded="true" />
+            <element signature="e#30221#30225#0#HTML" expanded="true" />
+            <element signature="e#30630#30669#0#HTML" expanded="true" />
+            <element signature="e#30716#30743#0#HTML" expanded="true" />
+            <element signature="e#30788#30792#0#HTML" expanded="true" />
+            <element signature="e#31197#31250#0#HTML" expanded="true" />
+            <element signature="e#31297#31324#0#HTML" expanded="true" />
+            <element signature="e#31369#31373#0#HTML" expanded="true" />
+            <element signature="e#31453#31474#0#HTML" expanded="true" />
+            <element signature="e#32253#32292#0#HTML" expanded="true" />
+            <element signature="e#32339#32366#0#HTML" expanded="true" />
+            <element signature="e#32411#32415#0#HTML" expanded="true" />
+            <element signature="e#32820#32859#0#HTML" expanded="true" />
+            <element signature="e#32906#32933#0#HTML" expanded="true" />
+            <element signature="e#32978#32982#0#HTML" expanded="true" />
+            <element signature="e#33387#33440#0#HTML" expanded="true" />
+            <element signature="e#33487#33514#0#HTML" expanded="true" />
+            <element signature="e#33559#33563#0#HTML" expanded="true" />
+            <element signature="e#33643#33664#0#HTML" expanded="true" />
+            <element signature="e#34264#34291#0#HTML" expanded="true" />
+            <element signature="e#34335#34357#0#HTML" expanded="true" />
+            <element signature="e#36552#36577#0#HTML" expanded="true" />
+            <element signature="e#37341#37365#0#HTML" expanded="true" />
+            <element signature="e#43893#43915#0#HTML" expanded="true" />
+            <element signature="e#44125#44147#0#HTML" expanded="true" />
+            <element signature="e#44357#44379#0#HTML" expanded="true" />
+            <element signature="e#44589#44611#0#HTML" expanded="true" />
+            <element signature="e#44821#44843#0#HTML" expanded="true" />
+            <element signature="e#45053#45075#0#HTML" expanded="true" />
+            <element signature="e#51178#51200#0#HTML" expanded="true" />
+            <element signature="e#51410#51432#0#HTML" expanded="true" />
+            <element signature="e#51642#51664#0#HTML" expanded="true" />
+            <element signature="e#51874#51896#0#HTML" expanded="true" />
+            <element signature="e#52106#52128#0#HTML" expanded="true" />
+            <element signature="e#52338#52360#0#HTML" expanded="true" />
+            <element signature="e#58463#58485#0#HTML" expanded="true" />
+            <element signature="e#58695#58717#0#HTML" expanded="true" />
+            <element signature="e#58927#58949#0#HTML" expanded="true" />
+            <element signature="e#59159#59181#0#HTML" expanded="true" />
+            <element signature="e#59391#59413#0#HTML" expanded="true" />
+            <element signature="e#59623#59645#0#HTML" expanded="true" />
+            <element signature="e#71879#71885#0#HTML" expanded="true" />
+            <element signature="e#72064#72070#0#HTML" expanded="true" />
+            <element signature="e#72207#72213#0#HTML" expanded="true" />
+            <element signature="e#72348#72354#0#HTML" expanded="true" />
+            <element signature="e#72562#72568#0#HTML" expanded="true" />
+            <element signature="e#72922#72928#0#HTML" expanded="true" />
+            <element signature="e#73059#73065#0#HTML" expanded="true" />
+            <element signature="e#73190#73196#0#HTML" expanded="true" />
+            <element signature="e#73323#73329#0#HTML" expanded="true" />
+            <element signature="e#73456#73462#0#HTML" expanded="true" />
+            <element signature="e#73787#73793#0#HTML" expanded="true" />
+            <element signature="e#73933#73939#0#HTML" expanded="true" />
+            <element signature="e#74085#74091#0#HTML" expanded="true" />
+            <element signature="e#74231#74237#0#HTML" expanded="true" />
+            <element signature="e#74374#74380#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
