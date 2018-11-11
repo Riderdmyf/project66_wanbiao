@@ -8,6 +8,7 @@
 {% block extcss %}
     <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/bg-index.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
 {% endblock %}
 
 {% block extjs %}
@@ -674,9 +675,14 @@
                 </div>
             </div>
             <div class="floor">
-                <div class="cf">
-                    <div class="cf_img">
-                        <ul></ul>
+                <div class="cf swiper-container">
+                    <div class="cf_img swiper-wrapper">
+{#                        <ul></ul>#}
+                        {% for lunbo in wheels %}
+                            <div class="swiper-slide">
+                                <img src="{{ lunbo.img }}">
+                            </div>
+                        {% endfor %}
                     </div>
                     <div class="cf_rl">
                         <div class="cf_rl_dir">

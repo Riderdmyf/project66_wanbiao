@@ -1,5 +1,3 @@
-import random
-
 from django.shortcuts import render
 from django.http import HttpResponse
 
@@ -9,7 +7,6 @@ from wanbiao.models import Wheel
 
 #index
 def index(request):
-    # return HttpResponse('wanbiao')
     wheels = Wheel.objects.all()
     data = {
         'wheels':wheels,
