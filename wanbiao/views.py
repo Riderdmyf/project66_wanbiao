@@ -1,9 +1,12 @@
+import uuid
+
 from django.shortcuts import render
 from django.http import HttpResponse
 
 # Create your views here.
 
-from wanbiao.models import Wheel
+from wanbiao.models import Wheel, User
+
 
 #index
 def index(request):
@@ -35,7 +38,14 @@ def login(request):
 
 #register
 def register(request):
-    return render(request, 'wanbiao/register.html')
+    if request.method == 'GET':
+        return render(request, 'wanbiao/register.html')
+    elif request.method == 'POST':
+        user = User()
+        user.phonenumber = request.POST.get('phonenumber')
+        user.passwd = request.POST.get('passwd')
+        # user.token = str(uuid.uuid5(uuid.uuid4(), 'register'))
+        user.save()
 
 #epos(buy page)
 def epos(request):

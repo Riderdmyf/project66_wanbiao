@@ -11,3 +11,15 @@ class Base(models.Model):
 class Wheel(Base):
     class Meta:
         db_table = 'lunbo'
+
+class Epos(Base):
+    class Meta:
+        db_table = 'product'
+
+class User(models.Model):
+    phonenumber = models.CharField(max_length=11, unique=True)
+    passwd = models.CharField(max_length=256)
+    # token = models.CharField(max_length=256)
+
+    class Meta:
+        db_table = 'wanbiao_user'
