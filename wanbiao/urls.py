@@ -11,4 +11,6 @@ urlpatterns = [
     url(r'^login/$', views.login, name='login'),
     url(r'^register/$', views.register, name='register'),
     url(r'^epos/$', views.epos, name='epos'), #buy page
+
+    url(r'^checkaccount/&', views.checkaccount, name='checkaccount'),
 ]

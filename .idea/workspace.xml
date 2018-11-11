@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed6db743-ecd8-462f-84b1-7e07803087f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/99be8e1e-970a-43a5-b95b-7efa590f9371.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/99be8e1e-970a-43a5-b95b-7efa590f9371.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wanbiao/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wanbiao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wanbiao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,20 +82,21 @@
           <entry key="lunbo" value="6" />
           <entry key="md" value="1" />
           <entry key="product" value="1" />
-          <entry key="py" value="57" />
+          <entry key="py" value="58" />
           <entry key="sql" value="5" />
+          <entry key="wanbiao_user" value="1" />
           <entry key="wanbiao_watch" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="4" />
-          <entry key="Database Element" value="10" />
+          <entry key="Database Element" value="11" />
           <entry key="HTML" value="33" />
           <entry key="JSON" value="1" />
           <entry key="JavaScript" value="7" />
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="57" />
+          <entry key="Python" value="58" />
           <entry key="Scratch" value="5" />
         </counts>
       </usages-collector>
@@ -105,7 +105,7 @@
           <entry key="html" value="1280" />
           <entry key="js" value="195" />
           <entry key="md" value="1" />
-          <entry key="py" value="2187" />
+          <entry key="py" value="2467" />
           <entry key="sql" value="224" />
           <entry key="txt" value="7" />
         </counts>
@@ -116,7 +116,7 @@
           <entry key="JavaScript" value="195" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="2187" />
+          <entry key="Python" value="2467" />
           <entry key="Scratch" value="224" />
         </counts>
       </usages-collector>
@@ -127,16 +127,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+            <state relative-caret-position="214">
+              <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1541958682415" expanded="true" signature="347:352" ph="..." />
-                <marker date="1541958682415" expanded="true" signature="425:430" ph="..." />
-                <marker date="1541958682415" expanded="true" signature="497:502" ph="..." />
-                <marker date="1541958682415" expanded="true" signature="567:572" ph="..." />
-                <marker date="1541958682415" expanded="true" signature="630:635" ph="..." />
+                <marker date="1541959868475" expanded="true" signature="371:376" ph="..." />
+                <marker date="1541959868475" expanded="true" signature="449:454" ph="..." />
+                <marker date="1541959868475" expanded="true" signature="521:526" ph="..." />
+                <marker date="1541959868475" expanded="true" signature="591:596" ph="..." />
+                <marker date="1541959868475" expanded="true" signature="654:659" ph="..." />
+                <marker date="1541959868475" expanded="true" signature="1292:1297" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -144,30 +154,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wanbiao/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+            <state relative-caret-position="229">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
               <folding>
-                <marker date="1541958450063" expanded="true" signature="82:87" ph="..." />
-                <marker date="1541958450063" expanded="true" signature="235:240" ph="..." />
-                <marker date="1541958450063" expanded="true" signature="297:302" ph="..." />
-                <marker date="1541958450063" expanded="true" signature="369:374" ph="..." />
+                <marker date="1541958853583" expanded="true" signature="82:87" ph="..." />
+                <marker date="1541958853583" expanded="true" signature="235:240" ph="..." />
+                <marker date="1541958853583" expanded="true" signature="297:302" ph="..." />
+                <marker date="1541958853583" expanded="true" signature="369:374" ph="..." />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/wanbiao/register.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2119">
-              <caret line="178" column="69" lean-forward="true" selection-start-line="178" selection-start-column="69" selection-end-line="178" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/js/register.js">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -198,7 +194,6 @@
         <option value="$PROJECT_DIR$/project66_wanbiao/urls.py" />
         <option value="$PROJECT_DIR$/templates/wanbiao/base.html" />
         <option value="$PROJECT_DIR$/templates/wanbiao/index_1.html" />
-        <option value="$PROJECT_DIR$/wanbiao/urls.py" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/99be8e1e-970a-43a5-b95b-7efa590f9371/console_1.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/99be8e1e-970a-43a5-b95b-7efa590f9371/console_2.sql" />
         <option value="$PROJECT_DIR$/static/js/translate.js" />
@@ -213,6 +208,7 @@
         <option value="$PROJECT_DIR$/templates/wanbiao/index.html" />
         <option value="$PROJECT_DIR$/static/js/index.js" />
         <option value="$PROJECT_DIR$/wanbiao/models.py" />
+        <option value="$PROJECT_DIR$/wanbiao/urls.py" />
         <option value="$PROJECT_DIR$/wanbiao/views.py" />
       </list>
     </option>
@@ -379,7 +375,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" weight="0.32881865" />
+      <window_info anchor="right" id="SciView" order="3" weight="0.32806623" />
       <window_info anchor="right" id="Database" order="4" weight="0.23927765" />
     </layout>
   </component>
@@ -540,13 +536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/manage.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -562,6 +551,26 @@
         <state relative-caret-position="-1710" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wanbiao/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <marker date="1541958853583" expanded="true" signature="82:87" ph="..." />
+            <marker date="1541958853583" expanded="true" signature="235:240" ph="..." />
+            <marker date="1541958853583" expanded="true" signature="297:302" ph="..." />
+            <marker date="1541958853583" expanded="true" signature="369:374" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://99be8e1e-970a-43a5-b95b-7efa590f9371/schema/Wanbiao/table/wanbiao_user">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/register.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -572,30 +581,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wanbiao/models.py">
+    <entry file="file://$PROJECT_DIR$/wanbiao/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="21" column="44" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding>
-            <marker date="1541958450063" expanded="true" signature="82:87" ph="..." />
-            <marker date="1541958450063" expanded="true" signature="235:240" ph="..." />
-            <marker date="1541958450063" expanded="true" signature="297:302" ph="..." />
-            <marker date="1541958450063" expanded="true" signature="369:374" ph="..." />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="47" column="19" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
+        <state relative-caret-position="214">
+          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1541958682415" expanded="true" signature="347:352" ph="..." />
-            <marker date="1541958682415" expanded="true" signature="425:430" ph="..." />
-            <marker date="1541958682415" expanded="true" signature="497:502" ph="..." />
-            <marker date="1541958682415" expanded="true" signature="567:572" ph="..." />
-            <marker date="1541958682415" expanded="true" signature="630:635" ph="..." />
+            <marker date="1541959868475" expanded="true" signature="371:376" ph="..." />
+            <marker date="1541959868475" expanded="true" signature="449:454" ph="..." />
+            <marker date="1541959868475" expanded="true" signature="521:526" ph="..." />
+            <marker date="1541959868475" expanded="true" signature="591:596" ph="..." />
+            <marker date="1541959868475" expanded="true" signature="654:659" ph="..." />
+            <marker date="1541959868475" expanded="true" signature="1292:1297" ph="..." />
           </folding>
         </state>
       </provider>
