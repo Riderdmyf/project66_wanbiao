@@ -14,6 +14,8 @@
 {% block extjs %}
     <script src="{% static 'js/pop_zone.js' %}"></script>
     <script src="{% static 'js/cf.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
 
 {% block content %}
@@ -675,7 +677,7 @@
                 </div>
             </div>
             <div class="floor">
-                <div class="cf swiper-container">
+                <div class="cf swiper-container" id="topSwiper">
                     <div class="cf_img swiper-wrapper">
 {#                        <ul></ul>#}
                         {% for lunbo in wheels %}
@@ -686,8 +688,8 @@
                     </div>
                     <div class="cf_rl">
                         <div class="cf_rl_dir">
-                            <a rel="#" class="cf_prev"></a>
-                            <a rel="#" class="cf_next"></a>
+                            <a rel="#" class="cf_prev swiper-button-prev"></a>
+                            <a rel="#" class="cf_next swiper-button-next"></a>
                         </div>
                     </div>
                     <div class="cf_boadr">
