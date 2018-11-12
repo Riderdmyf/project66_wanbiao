@@ -19,7 +19,7 @@ class Epos(Base):
 class User(models.Model):
     phonenumber = models.CharField(max_length=11, unique=True)
     passwd = models.CharField(max_length=256)
-    # token = models.CharField(max_length=256)
+    token = models.CharField(max_length=256)
 
     class Meta:
         db_table = 'wanbiao_user'

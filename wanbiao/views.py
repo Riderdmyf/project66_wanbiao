@@ -43,11 +43,12 @@ def register(request):
     elif request.method == 'POST':
         user = User()
         user.phonenumber = request.POST.get('phonenumber')
-        user.passwd = request.POST.get('passwd')
-        # user.token = str(uuid.uuid5(uuid.uuid4(), 'register'))
+        user.accesscode = request.POST.get('accesscode')
+        user.passwd = request.POST.get('password')
+        user.token = str(uuid.uuid5(uuid.uuid4(), 'register'))
         user.save()
 
-        # request.session['token'] = user.token
+        request.session['token'] = user.token
 
         return redirect('wanbiao:index')
 

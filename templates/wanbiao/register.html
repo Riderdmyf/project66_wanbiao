@@ -30,12 +30,12 @@
             <form action="{% url 'wanbiao:register' %}" method="post">
                 <p>
                     <em class="nmob"></em>
-                    <input class="ti" type="text" name="" id="phone" placeholder="请输入手机号码"/>
+                    <input class="ti" type="text" name="phonenumber" id="phone" placeholder="请输入手机号码"/>
                     <b class="err">亲，请输入正确的手机号码</b>
                 </p>
                 <p>
                     <em class="uchatcha"></em>
-                    <input class="ti yzmti" type="text" name="" id="yzm" placeholder="验证码"/>
+                    <input class="ti yzmti" type="text" name="accesscode" id="yzm" placeholder="验证码"/>
                     <input class="yzm" type="button" id="yzm1" value="3242"/>
                     <b class="err">验证码错误</b>
                 </p>
@@ -56,7 +56,7 @@
                     <b class="err">两次输入密码不相同</b>
                 </p>
                 <p class="btnb">
-                    <input class="btn" type="button" name="" id="zc" value="立即注册"/>
+                    <input class="btn" type="submit" name="" id="zc" value="立即注册"/>
                 </p>
                 <p class="xieyi">
                     点击“立即注册”，即表示您同意并愿意遵守
