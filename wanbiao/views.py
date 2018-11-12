@@ -41,16 +41,20 @@ def register(request):
     if request.method == 'GET':
         return render(request, 'wanbiao/register.html')
     elif request.method == 'POST':
-        user = User()
-        user.phonenumber = request.POST.get('phonenumber')
-        user.accesscode = request.POST.get('accesscode')
-        user.passwd = request.POST.get('password')
-        user.token = str(uuid.uuid5(uuid.uuid4(), 'register'))
-        user.save()
+        try:
+            user = User()
+            user.phonenumber = request.POST.get('phonenumber')
+            user.accesscode = request.POST.get('accesscode')
+            user.passwd = request.POST.get('password')
+            user.token = str(uuid.uuid5(uuid.uuid4(), 'register'))
+            user.save()
 
-        request.session['token'] = user.token
+            request.session['token'] = user.token
 
-        return redirect('wanbiao:index')
+            return redirect('wanbiao:index')
+
+        except:
+            return HttpResponse('regist failed(account has been used)')
 
 #epos(buy page)
 def epos(request):

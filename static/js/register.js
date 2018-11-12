@@ -10,6 +10,17 @@ $(function () {
         var ret = /^[\d]{5,20}$/;
         if (!ret.test(val)) {
             $("#phone").siblings(".err").show()
+
+            $.get('/checkaccount/'), {'account':$(this).val()}, function (response) {
+                console.log(response)
+                if (response.status == 'fine'){
+                    $("#phone").siblings(".err").hide();
+                    t1 = true;
+                }
+                else if(response.status == 'error'){
+                    $("#phone").siblings(".err").show()
+                }
+            }
         }
         else {
             $("#phone").siblings(".err").hide();
