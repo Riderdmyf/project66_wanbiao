@@ -34,7 +34,11 @@ def service(request):
 
 #login
 def login(request):
-    return render(request, 'wanbiao/login.html')
+    if request.method == 'GET':
+        return render(request, 'wanbiao/login.html')
+    elif request.method == 'POST':
+        pass
+
 
 #register
 def register(request):
