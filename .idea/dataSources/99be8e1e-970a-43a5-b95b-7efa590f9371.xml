@@ -1620,115 +1620,187 @@ model</ColNames>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="379" parent="288" name="img">
+    <column id="379" parent="288" name="bh">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="380" parent="288" name="key_value">
+    <column id="380" parent="288" name="bimg1">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="381" parent="288" name="PRIMARY">
+    <column id="381" parent="288" name="bimg2">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="382" parent="288" name="bimg3">
+      <Position>5</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="383" parent="288" name="bimg4">
+      <Position>6</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="384" parent="288" name="bimg5">
+      <Position>7</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="385" parent="288" name="bimg6">
+      <Position>8</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="386" parent="288" name="id_product">
+      <Position>9</Position>
+      <DataType>varchar(5)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="387" parent="288" name="name">
+      <Position>10</Position>
+      <DataType>varchar(256)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="388" parent="288" name="pp">
+      <Position>11</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="389" parent="288" name="wbj">
+      <Position>12</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="390" parent="288" name="xh">
+      <Position>13</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="391" parent="288" name="yj">
+      <Position>14</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="392" parent="288" name="yq">
+      <Position>15</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="393" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="382" parent="289" name="id">
+    <column id="394" parent="289" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="383" parent="289" name="number">
+    <column id="395" parent="289" name="number">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="384" parent="289" name="isselect">
+    <column id="396" parent="289" name="isselect">
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="385" parent="289" name="products_id">
+    <column id="397" parent="289" name="products_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="386" parent="289" name="user_id">
+    <column id="398" parent="289" name="user_id">
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="387" parent="289" name="wanbiao_cart_products_id_dff51c82_fk_product_id">
+    <index id="399" parent="289" name="wanbiao_cart_products_id_dff51c82_fk_product_id">
       <ColNames>products_id</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="388" parent="289" name="wanbiao_cart_user_id_fe088f3a_fk_wanbiao_user_id">
+    <index id="400" parent="289" name="wanbiao_cart_user_id_fe088f3a_fk_wanbiao_user_id">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="389" parent="289" name="PRIMARY">
+    <key id="401" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="390" parent="289" name="wanbiao_cart_products_id_dff51c82_fk_product_id">
+    <foreign-key id="402" parent="289" name="wanbiao_cart_products_id_dff51c82_fk_product_id">
       <ColNames>products_id</ColNames>
       <RefSchemaName>Wanbiao</RefSchemaName>
       <RefTableName>product</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="391" parent="289" name="wanbiao_cart_user_id_fe088f3a_fk_wanbiao_user_id">
+    <foreign-key id="403" parent="289" name="wanbiao_cart_user_id_fe088f3a_fk_wanbiao_user_id">
       <ColNames>user_id</ColNames>
       <RefSchemaName>Wanbiao</RefSchemaName>
       <RefTableName>wanbiao_user</RefTableName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="392" parent="290" name="id">
+    <column id="404" parent="290" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="393" parent="290" name="phonenumber">
+    <column id="405" parent="290" name="phonenumber">
       <Position>2</Position>
       <DataType>varchar(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="394" parent="290" name="passwd">
+    <column id="406" parent="290" name="passwd">
       <Position>3</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="395" parent="290" name="token">
+    <column id="407" parent="290" name="token">
       <Position>4</Position>
       <DataType>varchar(256)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="396" parent="290" name="phonenumber">
+    <index id="408" parent="290" name="phonenumber">
       <ColNames>phonenumber</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
-    <key id="397" parent="290" name="PRIMARY">
+    <key id="409" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="398" parent="290" name="phonenumber">
+    <key id="410" parent="290" name="phonenumber">
       <ColNames>phonenumber</ColNames>
       <UnderlyingIndexName>phonenumber</UnderlyingIndexName>
     </key>

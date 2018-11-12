@@ -12,7 +12,22 @@ class Wheel(Base):
     class Meta:
         db_table = 'lunbo'
 
-class Epos(Base):
+class Epos(models.Model):
+    id_product = models.CharField(max_length=5)
+    name = models.CharField(max_length=256)
+    xh = models.CharField(max_length=100)
+    bh = models.CharField(max_length=100)
+    pp = models.CharField(max_length=100)
+    wbj = models.CharField(max_length=20)
+    yj = models.CharField(max_length=20)
+    yq = models.CharField(max_length=20)
+    bimg1 = models.CharField(max_length=100)
+    bimg2 = models.CharField(max_length=100)
+    bimg3 = models.CharField(max_length=100)
+    bimg4 = models.CharField(max_length=100)
+    bimg5 = models.CharField(max_length=100)
+    bimg6 = models.CharField(max_length=100)
+
     class Meta:
         db_table = 'product'
 
