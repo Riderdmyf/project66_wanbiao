@@ -1,3 +1,4 @@
+import hashlib
 import uuid
 
 from django.shortcuts import render, redirect
@@ -6,6 +7,12 @@ from django.http import HttpResponse, JsonResponse
 # Create your views here.
 
 from wanbiao.models import Wheel, User
+
+#encode
+def generate_password(password):
+    sha = hashlib.sha512()
+    sha.update(password.encode('utf-8'))
+    return sha.hexdigest()
 
 
 #index
@@ -37,7 +44,21 @@ def login(request):
     if request.method == 'GET':
         return render(request, 'wanbiao/login.html')
     elif request.method == 'POST':
-        pass
+        phonenum = request.POST.get('phonenumber')
+        passwd = request.POST.get('passwd')
+
+    try:
+        user = User.objects.get(account=phonenum)
+        if user.passwd == generate_password(passwd):
+            user.token = str(uuid.uuid5(uuid.uuid4()), 'login')
+            user.save()
+            request.session['token'] = user.token
+            return redirect('wanbiao:index')
+        else:
+            return render(request, 'wanbiao/login.html', context={'Password_error':'password is not correct'})
+
+    except:
+        return render(request, 'wanbiao/login.html', context={'Account_error':'account not exist'})
 
 
 #register

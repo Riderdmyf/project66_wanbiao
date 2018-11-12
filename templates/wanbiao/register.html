@@ -28,6 +28,7 @@
         <div class="content">
             <h2>注册万表会员</h2>
             <form action="{% url 'wanbiao:register' %}" method="post">
+                 {% csrf_token %}
                 <p>
                     <em class="nmob"></em>
                     <input class="ti" type="text" name="phonenumber" id="phone" placeholder="请输入手机号码"/>

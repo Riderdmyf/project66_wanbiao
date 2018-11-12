@@ -67,5 +67,10 @@ $(function(){
 			console.log(response)
         })
     })
-	
+
+	$('.jiajian .jian').click(function () {
+		$.get('/addcart/', function (response) {
+			console.log(response)
+        })
+    })
 })
