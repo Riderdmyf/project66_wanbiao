@@ -160,3 +160,15 @@
 .mb17{
 	margin-bottom: 10px;
 }
+.err{
+	height: 20px;
+	background: url(../img/login_ico.png) no-repeat -9999px -9999px;
+	background-position: 0 -177px;
+	color: #d00000;
+	font-size: 12px;
+	line-height: 17px;
+	padding: 0 0 0 20px;
+	margin: 8px 0 -9px 0;
+	display: none;
+	text-align: left;
+}

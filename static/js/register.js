@@ -69,27 +69,4 @@ $(function () {
             $("#mima2").siblings(".err").show();
         }
     });
-
-    $("#zc").click(function () {
-        // if (t1 && t2 && t3 && t4) {
-        //     var xhr = new XMLHttpRequest();
-        //     xhr.open("post", "http://localhost/wbiao/php/register.php", true);
-        //     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        //     var str = "phone=" + $("#phone").val() + "&pwd=" + $("#mima1").val();
-        //     xhr.send(str);
-        //     xhr.onreadystatechange = function () {
-        //         if (xhr.readyState == 4 && xhr.status == 200) {
-        //             var obj = JSON.parse(xhr.responseText)
-        //             console.log(obj)
-        //             if (obj.status) {
-        //                 alert(obj.msg)
-        //                 window.location.href = "http://localhost/wbiao/html/login.html";
-        //             }
-        //         }
-        //     }
-        // }
-
-    })
-
-
-})
+});

@@ -1,7 +1,33 @@
 // <script type="text/javascript">
 $(function () {
 
+    var t1 = false;
+    var t2 = false;
+    var t3 = false;
+    var t4 = false;
 
+    $("#name").blur(function () {
+        var val = $(this).val();
+        var ret = /^[\d]{5,20}$/;
+        if (!ret.test(val)) {
+            $("#name").siblings(".err").show();
+        }
+        else {
+            $("#name").siblings(".err").hide();
+            t1 = true;
+        }
+    });
+
+    $("#password").blur(function () {
+        var val = $("#password").val();
+        if (/^[0-9a-zA-Z_]{6,15}$/.test(val)) {
+            $("#password").siblings(".err").hide();
+            t3 = true;
+        }
+        else {
+            $("#password").siblings(".err").show()
+        }
+    });
 
     // var phone = getCookie("phone");
     // var pwd = getCookie("pwd");
