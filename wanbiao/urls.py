@@ -13,4 +13,5 @@ urlpatterns = [
     url(r'^epos/$', views.epos, name='epos'), #buy page
 
     url(r'^checkaccount/&', views.checkaccount, name='checkaccount'),
+    url(r'^addcart/$', views.addcart, name='addcart'),
 ]

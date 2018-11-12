@@ -61,5 +61,11 @@ $(function(){
 	$(".nav_tit,.menu").mouseleave(function(){
 		$(".menu").stop().slideUp()
 	})
+
+	$('.jiajian .jia').click(function () {
+		$.get('/addcart/', function (response) {
+			console.log(response)
+        })
+    })
 	
 })

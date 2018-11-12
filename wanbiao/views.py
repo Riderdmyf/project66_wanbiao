@@ -80,3 +80,7 @@ def checkaccount(request):
         return JsonResponse(responseData)
     except:
         return JsonResponse(responseData)
+
+#addcart
+def addcart(request):
+    return JsonResponse({'msg':'add to cart successfully'})

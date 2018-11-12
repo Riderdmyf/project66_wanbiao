@@ -23,3 +23,12 @@ class User(models.Model):
 
     class Meta:
         db_table = 'wanbiao_user'
+
+class Cart(models.Model):
+    user = models.ForeignKey(User)
+    products = models.ForeignKey(Epos)
+    number = models.IntegerField()
+    isselect = models.BooleanField(default=True)
+
+    class Meta:
+        db_table = 'wanbiao_cart'
