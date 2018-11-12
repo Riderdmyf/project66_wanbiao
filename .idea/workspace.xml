@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ed6db743-ecd8-462f-84b1-7e07803087f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/wanbiao/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wanbiao/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/wanbiao/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="ed6db743-ecd8-462f-84b1-7e07803087f7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
     <session id="1910203178">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.102" value="1" />
           <entry key="project.open.time.106" value="1" />
           <entry key="project.open.time.112" value="1" />
@@ -105,7 +102,7 @@
           <entry key="html" value="1280" />
           <entry key="js" value="195" />
           <entry key="md" value="1" />
-          <entry key="py" value="2467" />
+          <entry key="py" value="2659" />
           <entry key="sql" value="224" />
           <entry key="txt" value="7" />
         </counts>
@@ -116,7 +113,7 @@
           <entry key="JavaScript" value="195" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="2467" />
+          <entry key="Python" value="2659" />
           <entry key="Scratch" value="224" />
         </counts>
       </usages-collector>
@@ -127,16 +124,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="214">
-              <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+            <state relative-caret-position="169">
+              <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <marker date="1541959868475" expanded="true" signature="371:376" ph="..." />
-                <marker date="1541959868475" expanded="true" signature="449:454" ph="..." />
-                <marker date="1541959868475" expanded="true" signature="521:526" ph="..." />
-                <marker date="1541959868475" expanded="true" signature="591:596" ph="..." />
-                <marker date="1541959868475" expanded="true" signature="654:659" ph="..." />
-                <marker date="1541959868475" expanded="true" signature="1292:1297" ph="..." />
+                <marker date="1541960354311" expanded="true" signature="371:376" ph="..." />
+                <marker date="1541960354311" expanded="true" signature="449:454" ph="..." />
+                <marker date="1541960354311" expanded="true" signature="521:526" ph="..." />
+                <marker date="1541960354311" expanded="true" signature="591:596" ph="..." />
+                <marker date="1541960354311" expanded="true" signature="654:659" ph="..." />
               </folding>
             </state>
           </provider>
@@ -590,16 +586,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wanbiao/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="60" column="33" lean-forward="true" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
+        <state relative-caret-position="169">
+          <caret line="67" column="48" lean-forward="true" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <marker date="1541959868475" expanded="true" signature="371:376" ph="..." />
-            <marker date="1541959868475" expanded="true" signature="449:454" ph="..." />
-            <marker date="1541959868475" expanded="true" signature="521:526" ph="..." />
-            <marker date="1541959868475" expanded="true" signature="591:596" ph="..." />
-            <marker date="1541959868475" expanded="true" signature="654:659" ph="..." />
-            <marker date="1541959868475" expanded="true" signature="1292:1297" ph="..." />
+            <marker date="1541960354311" expanded="true" signature="371:376" ph="..." />
+            <marker date="1541960354311" expanded="true" signature="449:454" ph="..." />
+            <marker date="1541960354311" expanded="true" signature="521:526" ph="..." />
+            <marker date="1541960354311" expanded="true" signature="591:596" ph="..." />
+            <marker date="1541960354311" expanded="true" signature="654:659" ph="..." />
           </folding>
         </state>
       </provider>
